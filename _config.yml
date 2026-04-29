@@ -12,7 +12,7 @@ plugins:
 #     url: "https://TU_USUARIO.github.io"
 #     baseurl: "/NOMBRE_DEL_REPO"
 url: "https://marthavlds1.github.io/"
-baseurl: "/portafolio-just-the-docs"
+baseurl: "/SistemasCiberfisicos"
 
 #Configuracion Formato, Header y Footer
 just_the_docs:
