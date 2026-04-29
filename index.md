@@ -31,15 +31,14 @@ Este repositorio contiene la documentación y el desarrollo técnico del proyect
 * [Luis Cortés Muñoz]
 * [Emmanuel Iturbide Rebolledo]
 * [Alexander Moncada Rivas]
-* [Martha Valdés Cuz]
-[Renata Badillo Cabrera]
-[Camila Sanchez Guevara]
+* [Martha Valdés Cruz]
+* [Renata Badillo Cabrera]
+* [Camila Sanchez Guevara]
 
 ---
 
 ## Descripción General
 *Aquí puedes añadir una breve descripción de los objetivos del sistema ciberfísico de Planchado Express, la integración de hardware/software y el impacto del proyecto.*
-
 
 
 Contenido:
