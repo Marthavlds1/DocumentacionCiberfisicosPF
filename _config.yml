@@ -29,7 +29,7 @@ search:
 # Ejemplo de enlace auxiliar (aparece arriba a la derecha)
 aux_links:
   "Repositorio en GitHub":
-    - "https://marthavlds1.github.io/DocumentacionCiberfisicosPF/"
+    - "https://marthavlds1.github.io/DocumentacionCiberfisicosPF"
 
 # Enlaces
 permalink: pretty
