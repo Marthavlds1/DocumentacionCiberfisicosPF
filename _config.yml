@@ -6,8 +6,8 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
-url: "https://luiscortesmunoz.github.io"
-baseurl: "/Planchaduria"
+url:     "https://marthavlds1.github.io"
+baseurl: "/DocumentacionCiberfisicosPF"
 
 just_the_docs:
   custom_css:
