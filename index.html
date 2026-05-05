@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Búsqueda de Pedido — Planchado Express</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:        #ede8e3;
+      --surface:   #ffffff;
+      --red:       #e63329;
+      --red-dark:  #c0281f;
+      --dark:      #1a1a1a;
+      --dark-2:    #2d2d2d;
+      --gray:      #888;
+      --gray-lt:   #ccc;
+      --border:    #d8d2cb;
+      --shadow:    0 2px 12px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.16);
+      --r-sm: 8px;
+      --r-md: 14px;
+      --r-lg: 22px;
+      --r-xl: 32px;
+      --t: .2s ease;
+      --white: #ffffff;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .btn-camara-grande {
+      -webkit-user-select: auto;
+      user-select: auto;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: block;
+      padding: 24px 20px 48px;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: var(--red) var(--border);
+    }
+
+    html {
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: var(--red) var(--border);
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px !important;
+      display: block !important;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--border) !important;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--red) !important;
+      border-radius: 4px;
+      min-height: 40px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--red-dark) !important;
+    }
+
+    .btn-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--surface);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: opacity .2s, transform .1s;
+      flex-shrink: 0;
+      margin-right: 4px;
+    }
+
+    .btn-back:hover  { opacity: .8; }
+    .btn-back:active { transform: scale(.93); }
+    .btn-back svg { width: 19px; height: 19px; }
+
+    .btn-back.home-btn {
+      gap: 6px;
+      width: auto;
+      min-width: 42px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .home-top-row {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: -4px 0 4px;
+    }
+
+    .phone-wrap {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .topbar-sm {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+    }
+
+    .iron-icon { width: 32px; height: 24px; }
+
+    .screen-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: var(--dark);
+      text-align: center;
+    }
+
+    .tracking-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .field-lbl {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .field {
+      flex: 1;
+      padding: 12px 14px;
+      border: 2px solid var(--gray-lt);
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      outline: none;
+      transition: border-color .2s;
+      color: var(--dark);
+    }
+
+    .field:focus { border-color: var(--red); }
+
+    .btn-iniciar {
+      padding: 12px 20px;
+      background: var(--red);
+      color:  #ede8e3;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity .2s, transform .1s;
+    }
+
+    .btn-iniciar:hover  { opacity: .88; }
+    .btn-iniciar:active { transform: scale(.97); }
+    .btn-iniciar:disabled { opacity: .5; cursor: not-allowed; }
+
+    .btn-spin {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255,255,255,.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .btn-camara-grande {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 28px 20px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: opacity .2s, transform .1s;
+      box-shadow: 0 4px 18px rgba(230,51,41,.25);
+    }
+
+    .btn-camara-grande:hover  { opacity: .88; }
+    .btn-camara-grande:active { transform: scale(.97); }
+
+    .btn-camara-icono {
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+
+    .btn-camara-texto {
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .qr-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .qr-overlay.hidden { display: none; }
+
+    .qr-scanner-box {
+      background: #fff;
+      border-radius: 18px;
+      width: 100%;
+      max-width: 360px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    }
+
+    .qr-scanner-hd {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .qr-scanner-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: #1a1a1a;
+    }
+
+    .qr-close-btn {
+      background: #f0f0f0;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      transition: background .15s;
+    }
+
+    .qr-close-btn:hover { background: #e0e0e0; }
+
+    .qr-video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .qr-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .qr-viewfinder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-corner {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-color: var(--red);
+      border-style: solid;
+      border-width: 0;
+    }
+
+    .qr-tl { top: 20%; left: 15%; border-top-width: 3px; border-left-width: 3px; border-radius: 4px 0 0 0; }
+    .qr-tr { top: 20%; right: 15%; border-top-width: 3px; border-right-width: 3px; border-radius: 0 4px 0 0; }
+    .qr-bl { bottom: 20%; left: 15%; border-bottom-width: 3px; border-left-width: 3px; border-radius: 0 0 0 4px; }
+    .qr-br { bottom: 20%; right: 15%; border-bottom-width: 3px; border-right-width: 3px; border-radius: 0 0 4px 0; }
+
+    .qr-hint {
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+      margin: 10px 18px 4px;
+    }
+
+    .qr-status {
+      min-height: 28px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--red);
+      padding: 4px 18px 14px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .info-val {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-top: 2px;
+    }
+
+    .tracking-id-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 4px;
+      color: var(--red);
+    }
+
+    .info-hint {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    .timeline-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 16px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .tl-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      position: relative;
+    }
+
+    .tl-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 36px;
+      width: 2px;
+      height: calc(100% - 4px);
+      background: var(--gray-lt);
+      transition: background .4s;
+    }
+
+    .tl-step.done:not(:last-child)::after  { background: #22c55e; }
+    .tl-step.active:not(:last-child)::after { background: var(--gray-lt); }
+
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      background: var(--gray-lt);
+      transition: background .4s, transform .3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tl-step.done .tl-dot  { background: #22c55e; }
+    .tl-step.active .tl-dot  { background: var(--red); transform: scale(1.15); box-shadow: 0 0 0 4px rgba(230,51,41,.15); }
+
+    .tl-body {
+      padding: 4px 0 20px;
+      flex: 1;
+    }
+
+    .tl-label {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .tl-step.inactive .tl-label { color: var(--gray); font-weight: 600; }
+
+    .tl-sub {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 2px;
+    }
+
+    .pulse-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--red);
+      animation: pulse-ring 1.5s ease-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0%   { opacity: .8; transform: scale(1); }
+      100% { opacity: 0;  transform: scale(1.6); }
+    }
+
+    .fotos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .foto-thumb {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+
+    .foto-thumb:hover { opacity: .85; }
+
+    .estado-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .b-pendiente  { background: #fef9c3; color: #854d0e; }
+    .b-en_proceso { background: #dbeafe; color: #1e40af; }
+    .b-planchado  { background: #e0f2fe; color: #0369a1; }
+    .b-listo      { background: #dcfce7; color: #166534; }
+    .b-entregado  { background: #f3f4f6; color: #374151; }
+
+    .empty-msg {
+      text-align: center;
+      color: var(--gray);
+      font-size: 14px;
+      padding: 12px 0;
+    }
+
+    .hidden { display: none !important; }
+
+    .photo-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .photo-overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 12px;
+    }
+
+    .photo-overlay-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    #toast-wrap {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 9998;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toast {
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      animation: slide-in .25s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,.18);
+    }
+
+    .toast.success { background: #22c55e; }
+    .toast.error   { background: var(--red); }
+    .toast.info    { background: var(--dark); }
+
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateX(20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .btn-scroll-float {
+      position: fixed;
+      bottom: 28px;
+      right: 16px;
+      min-width: 104px;
+      height: 52px;
+      padding: 0 14px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      z-index: 9000;
+      box-shadow: 0 4px 16px rgba(230,51,41,.35);
+      transition: transform .15s, opacity .2s;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .btn-scroll-float:active { transform: scale(.92); }
+    .btn-scroll-float svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .scroll-label { color: #fff; line-height: 1; }
+  </style>
+  <script src="jsQR.js"></script>
+</head>
+<body>
+
+<div class="phone-wrap">
+  <div class="topbar-sm">
+    <svg class="iron-icon" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 40 Q10 20 35 20 L65 20 Q72 20 72 27 L72 34 Q72 40 65 40 Z" fill="#e63329"/>
+      <rect x="26" y="40" width="36" height="6" rx="3" fill="#e63329"/>
+      <path d="M35 20 L28 8" stroke="#e63329" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="28" cy="8" r="3" fill="#e63329"/>
+      <circle cx="45" cy="30" r="2" fill="white" opacity="0.7"/>
+      <circle cx="53" cy="30" r="2" fill="white" opacity="0.7"/>
+      <circle cx="61" cy="30" r="2" fill="white" opacity="0.7"/>
+    </svg>
+    <span style="font-family:'Bebas Neue';font-size:16px;letter-spacing:2px;color:#1a1a2e">PLANCHADO EXPRESS</span>
+    <button class="btn-back home-btn" onclick="regresarInicio()" title="Regresar al inicio" aria-label="Regresar al inicio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 10.5L12 3l9 7.5"/>
+        <path d="M5 10v10h14V10"/>
+        <path d="M9 20v-6h6v6"/>
+      </svg>
+      <span>Inicio</span>
+    </button>
+  </div>
+
+  <h2 class="screen-title">BÚSQUEDA DE PEDIDO</h2>
+
+  <input type="hidden" id="tracking-input" />
+
+  <button class="btn-camara-grande" onclick="abrirEscaner()">
+    <span class="btn-camara-texto">Escanear código QR</span>
+  </button>
+
+  <div id="tracking-result" class="hidden">
+    <div class="info-card">
+      <p class="info-lbl">ID de Seguimiento</p>
+      <p class="tracking-id-big" id="tr-id">#00001</p>
+      <p class="info-hint">con él puedes consultar tu status en cualquier momento</p>
+    </div>
+
+    <div class="info-card" style="margin-top:0">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <p class="info-lbl">Prenda</p>
+          <p class="info-val" id="tr-prenda">—</p>
+        </div>
+        <div>
+          <p class="info-lbl">Material</p>
+          <p class="info-val" id="tr-material">—</p>
+        </div>
+        <div>
+          <p class="info-lbl">Cliente</p>
+          <p class="info-val" id="tr-cliente">—</p>
+        </div>
+        <div>
+          <p class="info-lbl">Entrega estimada</p>
+          <p class="info-val" id="tr-entrega">—</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <p class="timeline-title">Proceso de tu prenda</p>
+      <div class="timeline" id="timeline-wrap"></div>
+    </div>
+
+    <div class="info-card hidden" id="fotos-card">
+      <p class="info-lbl" style="margin-bottom:4px">Fotos del proceso</p>
+      <div class="fotos-grid" id="fotos-grid"></div>
+    </div>
+  </div>
+
+  <p id="tracking-empty" class="empty-msg">
+    Ingresa tu ID para ver el estado de tu prenda.
+  </p>
+</div>
+
+<div id="photo-overlay" class="photo-overlay hidden">
+  <button class="photo-overlay-close" onclick="closePhoto()">✕</button>
+  <img id="photo-overlay-img" src="" alt="Foto del pedido"/>
+</div>
+
+<div id="toast-wrap"></div>
+
+<script>
+const BACKEND_URL = "https://docker-planchaduria.onrender.com";
+
+const ESTADOS_ORDEN = [
+  { key: "pendiente",          icon: "1", label: "Pedido recibido",    sub: "Tu prenda fue registrada en el sistema" },
+  { key: "en_proceso",         icon: "2", label: "En proceso",         sub: "Tu prenda está siendo preparada" },
+  { key: "planchado",          icon: "3", label: "Planchado",          sub: "Tu prenda está siendo planchada" },
+  { key: "listo_para_entrega", icon: "4", label: "Listo para entrega", sub: "Puedes pasar a recoger tu prenda" },
+  { key: "entregado",          icon: "5", label: "Entregado",          sub: "Prenda entregada con éxito" }
+];
+
+let folioActual = null;
+let orderIdActual = null;
+let qrStream = null;
+let qrAnimFrame = null;
+let qrDetectado = false;
+let autoRefreshTimer = null;
+const AUTO_REFRESH_MS = 5000;
+
+function regresarInicio() {
+  detenerActualizacionAutomatica();
+  folioActual = null;
+  orderIdActual = null;
+  document.getElementById("tracking-result").classList.add("hidden");
+  document.getElementById("tracking-empty").style.display = "none";
+  document.getElementById("tracking-input").value = "";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function iniciarActualizacionAutomatica() {
+  detenerActualizacionAutomatica();
+
+  autoRefreshTimer = setInterval(() => {
+    refrescarEstado({ silencioso: true });
+  }, AUTO_REFRESH_MS);
+}
+
+function detenerActualizacionAutomatica() {
+  if (autoRefreshTimer) {
+    clearInterval(autoRefreshTimer);
+    autoRefreshTimer = null;
+  }
+}
+
+async function iniciarBusqueda() {
+  const raw = document.getElementById("tracking-input").value.trim().toUpperCase();
+  const folio = raw.startsWith("#") ? raw : "#" + raw;
+
+  if (!folio || folio === "#") {
+    toast("Ingresa un ID de seguimiento.", "error");
+    return;
+  }
+
+  await buscarPedidoPorFolio(folio, {
+    activarEnRender: false,
+    mostrarToast: true
+  });
+}
+
+async function buscarPedidoPorFolio(folio, options = {}) {
+  const {
+    activarEnRender = false,
+    mostrarToast = true
+  } = options;
+
+  const folioNormalizado = String(folio || "").trim().toUpperCase();
+
+  if (!folioNormalizado || folioNormalizado === "#") {
+    throw new Error("Folio inválido.");
+  }
+
+  detenerActualizacionAutomatica();
+  document.getElementById("tracking-result").classList.add("hidden");
+  document.getElementById("tracking-empty").style.display = "none";
+
+  const btn = document.getElementById("btn-buscar");
+  if (btn) btn.disabled = true;
+
+  try {
+    const data = await apiFetch(`/api/orders/track/${encodeURIComponent(folioNormalizado)}`);
+    const p = data.order;
+
+    folioActual = p.Folio || folioNormalizado;
+    orderIdActual = p.id || null;
+
+    if (activarEnRender) {
+      const activacion = await apiPost(
+        `/api/worker/activate-by-folio/${encodeURIComponent(folioActual)}`,
+        {}
+      );
+      orderIdActual = activacion?.order?.id || orderIdActual;
+    }
+
+    const refrescado = await apiFetch(`/api/orders/track/${encodeURIComponent(folioActual)}`);
+    const pedidoFinal = refrescado.order;
+
+    setText("tr-id", pedidoFinal.Folio || folioActual);
+    setText("tr-prenda", pedidoFinal.tipoPrenda || "—");
+    setText("tr-material", pedidoFinal.material || "—");
+    setText("tr-cliente", pedidoFinal.cliente || "—");
+    setText("tr-entrega", fmtDate(pedidoFinal.FechaEntrega));
+
+    renderTimeline(pedidoFinal.Estado);
+    renderFotos(pedidoFinal.fotos || []);
+
+    document.getElementById("tracking-result").classList.remove("hidden");
+    iniciarActualizacionAutomatica();
+
+    if (mostrarToast) {
+      toast(
+        activarEnRender
+          ? "Pedido activado correctamente."
+          : "Pedido encontrado.",
+        "success"
+      );
+    }
+
+    return pedidoFinal;
+  } catch (err) {
+    document.getElementById("tracking-empty").textContent =
+      `No se encontró ningún pedido con ID ${folioNormalizado}.`;
+    document.getElementById("tracking-empty").style.display = "block";
+
+    if (mostrarToast) {
+      toast(err.message || "Pedido no encontrado.", "error");
+    }
+    throw err;
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+async function refrescarEstado(options = {}) {
+  const { silencioso = false } = options;
+
+  if (!folioActual) return;
+
+  try {
+    const data = await apiFetch(`/api/orders/track/${encodeURIComponent(folioActual)}`);
+    const p = data.order;
+
+    orderIdActual = p.id || orderIdActual;
+    setText("tr-prenda", p.tipoPrenda || "—");
+    setText("tr-material", p.material || "—");
+    setText("tr-cliente", p.cliente || "—");
+    setText("tr-entrega", fmtDate(p.FechaEntrega));
+    renderTimeline(p.Estado);
+    renderFotos(p.fotos || []);
+
+    if (!silencioso) {
+      toast("Estado actualizado.", "info");
+    }
+  } catch (err) {
+    if (!silencioso) {
+      toast("No se pudo actualizar.", "error");
+    }
+  }
+}
+
+function renderTimeline(estadoActual) {
+  const wrap = document.getElementById("timeline-wrap");
+  if (!wrap) return;
+
+  const estadoVisual = estadoActual === "listo" ? "entregado" : estadoActual;
+  const idxActual = ESTADOS_ORDEN.findIndex(e => e.key === estadoVisual);
+
+  wrap.innerHTML = ESTADOS_ORDEN.map((e, i) => {
+    let cls = "inactive";
+    let dot = `<span style="font-size:15px">${e.icon}</span>`;
+    let pulse = "";
+
+    if (idxActual !== -1) {
+      if (i < idxActual) {
+        cls = "done";
+        dot = `<span style="font-size:15px">✓</span>`;
+      } else if (i === idxActual) {
+        cls = "active";
+        pulse = `<div class="pulse-ring"></div>`;
+      }
+    }
+
+    if (estadoVisual === "entregado") {
+      cls = "done";
+      dot = `<span style="font-size:15px">✓</span>`;
+      pulse = "";
+    }
+
+    return `
+      <div class="tl-step ${cls}">
+        <div class="tl-dot">${pulse}${dot}</div>
+        <div class="tl-body">
+          <p class="tl-label">${e.label}</p>
+          <p class="tl-sub">${i === idxActual && estadoVisual !== "entregado" ? '<strong style="color:#e63329">Estado actual</strong> · ' : ""}${e.sub}</p>
+        </div>
+      </div>`;
+  }).join("");
+}
+  
+
+function renderFotos(fotos) {
+  const card = document.getElementById("fotos-card");
+  const grid = document.getElementById("fotos-grid");
+
+  if (!fotos || fotos.length === 0) {
+    card.classList.add("hidden");
+    grid.innerHTML = "";
+    return;
+  }
+
+  card.classList.remove("hidden");
+  grid.innerHTML = fotos.map(f => {
+    const src = f.url || (f.relative_url ? BACKEND_URL + f.relative_url : "");
+    return `<img
+      class="foto-thumb"
+      src="${esc(src)}"
+      alt="Foto del proceso"
+      onclick="openPhoto('${String(src).replace(/'/g, "\\'")}')"
+    />`;
+  }).join("");
+}
+
+function openPhoto(src) {
+  document.getElementById("photo-overlay-img").src = src;
+  document.getElementById("photo-overlay").classList.remove("hidden");
+}
+
+function closePhoto() {
+  document.getElementById("photo-overlay").classList.add("hidden");
+  document.getElementById("photo-overlay-img").src = "";
+}
+
+async function apiFetch(path) {
+  const res = await fetch(`${BACKEND_URL}${path}`, {
+    headers: { "Content-Type": "application/json" }
+  });
+  const data = await res.json();
+  if (!res.ok || !data.ok) {
+    throw new Error(data.message || "Error del servidor");
+  }
+  return data;
+}
+
+async function apiPost(path, body = {}) {
+  const res = await fetch(`${BACKEND_URL}${path}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body || {})
+  });
+  const data = await res.json();
+  if (!res.ok || !data.ok) {
+    throw new Error(data.message || "Error del servidor");
+  }
+  return data;
+}
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+}
+
+function esc(s) {
+  return String(s ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function fmtDate(value) {
+  if (!value) return "—";
+  const text = String(value);
+  const d = new Date(text.includes("T") ? text : `${text}T00:00:00`);
+  if (isNaN(d.getTime())) return value;
+  return d.toLocaleDateString("es-MX", { year: "numeric", month: "2-digit", day: "2-digit" });
+}
+
+function toast(msg, type = "info") {
+  const icons = { success: "✅", error: "❌", info: "ℹ️" };
+  const wrap = document.getElementById("toast-wrap");
+  const el = document.createElement("div");
+  el.className = `toast ${type}`;
+  el.innerHTML = `<span>${icons[type] || ""}</span><span>${esc(msg)}</span>`;
+  wrap.appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+
+async function abrirEscaner() {
+  qrDetectado = false;
+  document.getElementById("qr-status").textContent = "";
+  document.getElementById("qr-scanner-overlay").classList.remove("hidden");
+
+  try {
+    qrStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "environment" }
+    });
+    const video = document.getElementById("qr-video");
+    video.srcObject = qrStream;
+    await video.play();
+
+    if (qrAnimFrame) {
+      cancelAnimationFrame(qrAnimFrame);
+      qrAnimFrame = null;
+    }
+
+    qrAnimFrame = requestAnimationFrame(escanearFrame);
+  } catch (err) {
+    document.getElementById("qr-status").textContent = "⚠️ No se pudo acceder a la cámara.";
+    console.error(err);
+  }
+}
+
+async function escanearFrame() {
+  const video = document.getElementById("qr-video");
+
+  if (!video || qrDetectado) return;
+
+  if (video.readyState !== video.HAVE_ENOUGH_DATA) {
+    qrAnimFrame = requestAnimationFrame(escanearFrame);
+    return;
+  }
+
+  const canvas = document.createElement("canvas");
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const code = jsQR(imageData.data, imageData.width, imageData.height, {
+    inversionAttempts: "attemptBoth"
+  });
+
+  if (code && code.data) {
+    qrDetectado = true;
+
+    const folioLeido = code.data.trim().toUpperCase();
+    const folio = folioLeido.startsWith("#") ? folioLeido : `#${folioLeido}`;
+    document.getElementById("qr-status").textContent = "✅ QR detectado: " + folio;
+
+    try {
+      cerrarEscaner();
+
+      const input = document.getElementById("tracking-input");
+      input.value = folio.replace("#", "");
+
+      await buscarPedidoPorFolio(folio, {
+        activarEnRender: true,
+        mostrarToast: true
+      });
+    } catch (err) {
+      cerrarEscaner();
+      toast(err.message || "No se pudo activar el pedido desde el QR.", "error");
+      document.getElementById("qr-status").textContent =
+        "⚠️ " + (err.message || "Error al procesar el QR.");
+    }
+    return;
+  }
+
+  qrAnimFrame = requestAnimationFrame(escanearFrame);
+}
+
+function cerrarEscaner() {
+  document.getElementById("qr-scanner-overlay").classList.add("hidden");
+
+  if (qrStream) {
+    qrStream.getTracks().forEach(t => t.stop());
+    qrStream = null;
+  }
+
+  if (qrAnimFrame) {
+    cancelAnimationFrame(qrAnimFrame);
+    qrAnimFrame = null;
+  }
+
+  const video = document.getElementById("qr-video");
+  if (video) {
+    video.srcObject = null;
+  }
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closePhoto();
+});
+</script>
+
+<div id="qr-scanner-overlay" class="qr-overlay hidden">
+  <div class="qr-scanner-box">
+    <div class="qr-scanner-hd">
+      <span class="qr-scanner-title">📷 Escanear código QR</span>
+      <button class="qr-close-btn" onclick="cerrarEscaner()">✕</button>
+    </div>
+    <div class="qr-video-wrap">
+      <video id="qr-video" class="qr-video" autoplay playsinline muted></video>
+      <div class="qr-viewfinder">
+        <div class="qr-corner qr-tl"></div>
+        <div class="qr-corner qr-tr"></div>
+        <div class="qr-corner qr-bl"></div>
+        <div class="qr-corner qr-br"></div>
+      </div>
+    </div>
+    <p class="qr-hint">Apunta la cámara al código QR de tu pedido</p>
+    <div id="qr-status" class="qr-status"></div>
+  </div>
+</div>
+
+<button class="btn-scroll-float" id="btn-scroll-float" onclick="toggleScroll()" aria-label="Ir abajo">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="scroll-icon" aria-hidden="true">
+    <path d="M12 5v14M5 15l7 7 7-7"/>
+  </svg>
+  <span class="scroll-label" id="scroll-label">Abajo</span>
+</button>
+
+<script>
+function toggleScroll() {
+  const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 10;
+  if (atBottom) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+}
+
+function actualizarBotonScroll() {
+  const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 10;
+  const icon = document.getElementById("scroll-icon");
+  const label = document.getElementById("scroll-label");
+  const btn = document.getElementById("btn-scroll-float");
+
+  if (!icon || !label || !btn) return;
+
+  if (atBottom) {
+    icon.innerHTML = '<path d="M12 19V5M5 9l7-7 7 7"/>';
+    label.textContent = "Arriba";
+    btn.setAttribute("aria-label", "Ir arriba");
+  } else {
+    icon.innerHTML = '<path d="M12 5v14M5 15l7 7 7-7"/>';
+    label.textContent = "Abajo";
+    btn.setAttribute("aria-label", "Ir abajo");
+  }
+}
+
+window.addEventListener("scroll", actualizarBotonScroll);
+window.addEventListener("load", actualizarBotonScroll);
+</script>
+</body>
+</html>
