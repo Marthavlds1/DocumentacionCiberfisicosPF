@@ -136,13 +136,13 @@ El archivo [`dashboard_server.py`](https://github.com/Marthavlds1/DocumentacionC
 
 ### 📁 Planchaduria-main  
 Código fuente de la **interfaz web del cliente** (SPA en GitHub Pages + Firebase).  
-🔗 [https://github.com/Marthavlds1/Planchaduria-main](https://github.com/Marthavlds1/Planchaduria-main)
+🔗 [https://github.com/Marthavlds1/Planchaduria-main](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/Planchaduria-main%20(8).zip)
 
 ---
 
 ### 📁 Docker_Planchaduria  
 Backend desarrollado en Flask y desplegado en Render como contenedor Docker (API REST del sistema).  
-🔗 [https://github.com/Marthavlds1/Docker_Planchaduria](https://github.com/Marthavlds1/Docker_Planchaduria)
+🔗 [https://github.com/Marthavlds1/Docker_Planchaduria](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/Docker_Planchaduria-main%20(4).zip)
 
 ---
 
