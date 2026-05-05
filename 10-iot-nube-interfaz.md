@@ -130,6 +130,24 @@ El archivo [`dashboard_server.py`](https://github.com/Marthavlds1/DocumentacionC
 
 ---
 
+---
+
+## Recursos asociados (Sección 10)
+
+### 📁 Planchaduria-main  
+Código fuente de la **interfaz web del cliente** (SPA en GitHub Pages + Firebase).  
+🔗 [https://github.com/Marthavlds1/Planchaduria-main](https://github.com/Marthavlds1/Planchaduria-main)
+
+---
+
+### 📁 Docker_Planchaduria  
+Backend desarrollado en Flask y desplegado en Render como contenedor Docker (API REST del sistema).  
+🔗 [https://github.com/Marthavlds1/Docker_Planchaduria](https://github.com/Marthavlds1/Docker_Planchaduria)
+
+---
+
+Ambos repositorios forman parte de la **Sección 10 — IoT / Nube / Interfaz Web**, ya que implementan la comunicación entre el cliente, la nube y el sistema físico.
+
 ## Siguiente sección
 
 [Simulación y Modelado](11-simulacion.md)
