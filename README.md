@@ -32,7 +32,8 @@ Planchado Express es un sistema ciberfísico integrado que automatiza el proceso
 ---
 
 ## Estructura del repositorio
-´´´
+
+```
 DocumentacionCiberfisicosPF/
 ├── _config.yml
 ├── _includes/
@@ -59,7 +60,7 @@ DocumentacionCiberfisicosPF/
 ├── 16-evidencia.md
 ├── 17-referencias.md
 └── uso-ia.md
-´´´
+```
 ---
 
 ## Equipo de desarrollo
