@@ -27,61 +27,7 @@ El sistema **Planchado Express** es un sistema ciberfísico (CPS) compuesto por 
 
 ## Diagrama de arquitectura
 ```
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVGEpRJUk=/?embedMode=view_only_without_ui&moveToViewport=-8502,-1370,11513,5209&embedId=194574812172" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
-
-```
-  ┌────────────────────────────────────────────────────────┐
-  │                   ☁  NUBE / INTERNET                   │
-  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
-  │  │   Firebase   │  │  Flask API   │  │ GitHub Pages │ │
-  │  │  Realtime DB │  │ (Render/     │  │ Interfaz Web │ │
-  │  │  Firestore   │  │  Docker)     │  │  (cliente)   │ │
-  │  │  Auth+Storage│  │              │  │              │ │
-  │  └──────┬───────┘  └──────┬───────┘  └──────────────┘ │
-  └─────────┼────────────────┼──────────────────────────── ┘
-            │   HTTPS/SDK    │   HTTPS/REST
-            ▼                ▼
-  ┌─────────────────────────────────────────────────────┐
-  │          🧠  RASPBERRY PI 3  (Orquestador)          │
-  │              rutina_maestra.py                       │
-  │              IP: 192.168.3.162                       │
-  │                                                      │
-  │  • Polling Firebase → detecta pedidos nuevos         │
-  │  • Control PLC vía pymodbus (Modbus TCP)             │
-  │  • Envío de scripts URScript al UR3 por socket TCP   │
-  │  • Comunicación serial con ESP32 (pistón/torreta)    │
-  │  • Solicitud de foto a Raspberry cámara (HTTP)       │
-  │  • Clasificación IA con keras_model.h5               │
-  └──────┬──────────────┬──────────────────┬────────────┘
-         │              │                  │
-    Modbus TCP     Modbus TCP         Serial USB
-    192.168.3.151  192.168.3.71       COM3 / 115200
-         │              │                  │
-         ▼              ▼                  ▼
-  ┌──────────┐   ┌──────────────┐   ┌──────────────┐
-  │  PLC     │   │   UR3        │   │   ESP32      │
-  │ Micro850 │   │   Robot      │   │              │
-  │          │   │ Colaborativo │   │ Torreta LED  │
-  │ Motor    │   │              │   │ Pistón       │
-  │ Sensores │   │ camisa/      │   │ eléctrico    │
-  │ Plancha  │   │ playera      │   │              │
-  └──────────┘   └──────────────┘   └──────────────┘
-       │
-  Entradas/Salidas digitales
-       │
-  ┌────┴──────────────────────────────────────────────┐
-  │              CAMPO — SENSORES / ACTUADORES         │
-  │  [S1 Barrera IR] [S2 Inductivo] [S3 Inductivo]    │
-  │  [Motor banda]   [Plancha eléctrica 000007]        │
-  └───────────────────────────────────────────────────┘
-
-  ┌──────────────────────────────────────────────────┐
-  │                🖥️  HMI                            │
-  │        Raspberry Pi 3 + Pantalla táctil           │
-  │        Cámara lectora de QR                       │
-  │        Muestra estado del pedido en tiempo real   │
-  │        Se conecta a Firebase vía HTTPS            │
-  └──────────────────────────────────────────────────┘
+insertar imagen de diagrama
 ```
 
 ---
