@@ -32,3 +32,64 @@ Planchado Express es un sistema ciberfísico integrado que automatiza el proceso
 ---
 
 ## Estructura del repositorio
+DocumentacionCiberfisicosPF/
+├── _config.yml
+├── _includes/
+│   ├── head_custom.html
+│   └── footer_custom.html
+├── assets/
+│   └── css/custom.css
+├── index.md
+├── 01-contexto.md
+├── 02-problema.md
+├── 03-objetivos.md
+├── 04-descripcion-funcional.md
+├── 05-algoritmo.md
+├── 06-arquitectura.md
+├── 07-diseno-mecanico.md
+├── 08-diseno-electronico.md
+├── 09-control-programacion.md
+├── 10-iot-nube-interfaz.md
+├── 11-simulacion.md
+├── 12-materiales-costos.md
+├── 13-metodologia.md
+├── 14-resultados.md
+├── 15-problemas.md
+├── 16-evidencia.md
+├── 17-referencias.md
+└── uso-ia.md
+---
+
+## Equipo de desarrollo
+
+| Integrante | Programa |
+| :--- | :--- |
+| Luis Cortés Muñoz | Ingeniería Mecatrónica — IBERO |
+| Emmanuel Iturbide Rebolledo | Ingeniería Mecatrónica — IBERO |
+| Alexander Moncada Rivas | Ingeniería Mecatrónica — IBERO |
+| Martha Valdés Cruz | Ingeniería Mecatrónica — IBERO |
+| Renata Badillo Cabrera | Ingeniería Mecatrónica — IBERO |
+| Camila Sánchez Guevara | Ingeniería Mecatrónica — IBERO |
+
+**Cuerpo docente:** Mr. Joel Arango Ramírez · Dr. Huber Girón Nieto
+
+---
+
+## Referencias del proyecto
+
+| Recurso | URL |
+| :--- | :--- |
+| Documentación técnica | [marthavlds1.github.io/DocumentacionCiberfisicosPF](https://marthavlds1.github.io/DocumentacionCiberfisicosPF) |
+| Interfaz web del cliente | [luiscortesmunoz.github.io/Planchaduria](https://luiscortesmunoz.github.io/Planchaduria/) |
+| Backend API (Render) | [docker-planchaduria.onrender.com](https://docker-planchaduria.onrender.com) |
+| Diagrama de arquitectura | [Miro — Arquitectura Ciberfísica](https://miro.com/app/live-embed/uXjVGEpRJUk=/) |
+
+---
+
+## Tecnologías utilizadas
+
+`Python` `URScript` `Flask` `Firebase` `Docker` `Keras` `TensorFlow` `Modbus TCP` `Raspberry Pi` `ESP32` `PLC Micro850` `Jekyll` `Just the Docs`
+
+---
+
+Universidad Iberoamericana · Ingeniería Mecatrónica · Sistemas Ciberfísicos · Primavera 2026
