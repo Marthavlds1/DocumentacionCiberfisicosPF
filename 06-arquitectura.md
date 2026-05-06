@@ -26,6 +26,8 @@ El sistema **Planchado Express** es un sistema ciberfísico (CPS) compuesto por 
 ---
 
 ## Diagrama de arquitectura
+```
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVGEpRJUk=/?embedMode=view_only_without_ui&moveToViewport=-8502,-1370,11513,5209&embedId=194574812172" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
 ```
   ┌────────────────────────────────────────────────────────┐
