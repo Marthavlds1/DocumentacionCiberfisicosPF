@@ -23,8 +23,8 @@ Bienvenido a la documentación técnica del proyecto **Planchado Express**, desa
 
 ## Cuerpo Docente
 
-- **Mr. Joel Arango Ramírez**
-- **Dr. Huber Girón Nieto**
+- **Mr. Joel Arango Ramírez.**
+- **Dr. Huber Girón Nieto.**
 
 ## Integrantes del Equipo
 
