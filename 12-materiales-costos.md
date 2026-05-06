@@ -6,85 +6,130 @@ nav_order: 13
 
 # Materiales y Costos
 
-## Lista de materiales del proyecto
+Los materiales listados fueron confirmados directamente desde los archivos de código del proyecto (`rutina_maestra.py`, `PROG1.txt`, `MbSrvConf.xml`, `camisa.script`, `playera.script`). Los precios fueron investigados en Amazon México, MercadoLibre y distribuidores nacionales en mayo 2026.
 
-Los precios fueron investigados en Amazon México, MercadoLibre y distribuidores nacionales (mayo 2026). Los equipos principales del laboratorio (UR3, PLC Micro850) son propiedad de la IBERO y no representan costo directo para el equipo.
+---
 
-| # | Material | Modelo / Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+## Control industrial y robótica
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
 | :---: | :--- | :--- | :---: | ---: | ---: |
-| 1 | Canaleta ranurada | 40 × 25 mm con tapa, 2 m (Legrand 036205) | 2 | $299 | $598 |
-| 2 | Router | — | — | — | — |
-| 3 | Pistones | Neumático 25 × 100 doble acción | 4 | $350 | $1,400 |
-| 4 | Válvulas | Electroválvula 5/2 monoestable FESTO | — | $800 | — |
-| 5 | Multipunto | — | — | — | — |
-| 6 | Motores (paso a paso) | Nema 17 — 4 kg/cm 1.7A Bipolar | 4 | $350 | $1,400 |
-| 7 | Drivers motores | TB6600 4A (incluido con motor) | 4 | — | — |
-| 8 | Sensor cortina | 12 Beams BEM1240-C-440NB, DC 10–30V | 1 | $650 | $650 |
-| 9 | Sensores inductivos | LJ12A3-4-Z/BX, NPN NO, M12, 6–36V | 4 | $120 | $480 |
-| 10 | Servomotores | MG995 TowerPro 15 kg, 180° | 5 | $180 | $900 |
-| 11 | Power Supply | Phoenix Contact 24V DIN (protección PLC) | 1 | $1,200 | $1,200 |
-| 12 | HMI | Pantalla IPS táctil 7" DSI | 2 | $1,500 | $3,000 |
-| 13 | Cámara web | Logitech C270 HD 720p con micrófono | 3 | $650 | $1,950 |
-| 14 | Raspberry Pi | Raspberry Pi 4 Modelo B — 4 GB RAM | 2 | $2,741 | $5,482 |
-| 15 | ESP32-S3 | Seeed Studio XIAO ESP32-S3, WiFi + BLE 5.0 | 2 | $320 | $640 |
-| 16 | Cable Ethernet | Cat6, 5 metros, blindado | 5 | $120 | $600 |
-| 17 | Torretas | Torre señalización LED industrial | 2 | $480 | $960 |
-| 18 | Plancha de vapor | T-fal vertical, 700–750 g, con botón | 1 | $1,100 | $1,100 |
-| 19 | Tiras LED | NeoPixel Stick 8×5050 RGB WS2812 | 6 | $180 | $1,080 |
-| 20 | Perfil grande | Aluminio V-Slot 40 × 40 mm | — | — | — |
-| 21 | Perfil chico | Aluminio V-Slot 20 × 20 mm | — | — | — |
-| 22 | Conectores grandes | Serie 40 | — | — | — |
-| 23 | Conectores chicos | Serie 20 | — | — | — |
-| 24 | Relevadores PLC | Finder 55.34 24V — 4 polos | 4 | $280 | $1,120 |
-| 25 | Placa panel | Lámina galvanizada 4×10 c-24 | 1 | $600 | $600 |
-| 26 | Botonera | Industrial 22 mm — paro, arranque, emergencia | 1 | $450 | $450 |
-| 27 | Tuerca perfil chico | Tuerca T Serie 20 — M5 | 80 u. | $2 | $160 |
-| 28 | Rondanas | Rondana M5 plana | 80 u. | $1 | $80 |
-| 29 | Tornillo perfil chico | Tornillo T M5 × 8 mm | 80 u. | $2 | $160 |
-| 30 | Tuerca perfil grande | Tuerca T Serie 15 — 5/16"-18 | 50 u. | $3 | $150 |
-| 31 | Tornillo perfil grande | Tornillo T 5/16"-18 × 3/4" | 50 u. | $3 | $150 |
-| 32 | Switch | TP-Link TL-SG108 — 8 puertos Gigabit | 4 | $600 | $2,400 |
-| 33 | Clemas | Dinkle DK4N — terminales separables | 3 | $180 | $540 |
-| 34 | Interruptor termomagnético | ABB 1 polo breaker | 1 | $350 | $350 |
-| 35 | Filamento PLA | Creality PLA 1 kg (3 blanco + 3 negro) | 6 rollos | $350 | $2,100 |
-| 36 | Tanque compresor | Ridgid 6 galones 150 PSI | 1 | $3,500 | $3,500 |
-| 37 | Manguera chica | Poliuretano 4 mm | 5 m | $40/m | $200 |
-| 38 | Válvula cierre Festo | Festo 153468 | 1 | $420 | $420 |
-| 39 | Manguera grande | Poliuretano 6 mm | 5 m | $50/m | $250 |
-| 40 | Válvula reguladora filtro | FRL combinado 1/4" | 1 | $650 | $650 |
-| 41 | Cable para conexiones | Calibre 16 — (3 m negro + 3 m blanco + 3 m rojo) | 9 m | $25/m | $225 |
-| 42 | Alambre para conexiones | Calibre 22 AWG — (3 m negro + 3 m azul + 3 m rojo) | 9 m | $15/m | $135 |
-| 43 | Fuente de alimentación | DC variable 0–30V / 0–10A de laboratorio | 2 | $950 | $1,900 |
-| 44 | Ruedas V | Delrin dual V-Slot para perfil (80 ruedas total) | 40 (×2 pedidos) | $35 | $2,800 |
-| 45 | Tornillo Allen M4 | M4 × 30 mm G12.9 — ajuste de ruedas | 100 u. | $3 | $300 |
-| 46 | Tuercas M4 | M4 hexagonal carbono (200 en total) | 2 paq. | $120/paq. | $240 |
-| 47 | Espaciadores M4 | Nylon M4, 4 mm ID × 12 mm OD | 2 paq. | $130/paq. | $260 |
-| 48 | Rodamientos 604 | 604ZZ — 4×12×4 mm carbono | 2 paq. | $200/paq. | $400 |
-| 49 | Panel PLC | Tablero metálico de control | 1 | — | — |
-| 50 | Atmega328p | Microcontrolador DIP-28 | — | $80 | — |
+| 1 | PLC Allen Bradley Micro850 | Tablero completo — Modbus TCP `192.168.3.151` | 1 | Laboratorio IBERO | — |
+| 2 | Robot colaborativo UR3 | Universal Robots UR3, 6 DOF, TCP `[0,0,0.077]` | 1 | Laboratorio IBERO | — |
+| 3 | HMI — Pantalla táctil | IPS DSI 7" sobre Raspberry Pi 3 | 2 | $1,500 | $3,000 |
+
+## Cómputo y microcontroladores
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 4 | Raspberry Pi 4 Modelo B | 4 GB RAM — AG Electrónica dist. oficial MX | 2 | $2,741 | $5,482 |
+| 5 | ESP32-S3 XIAO Seeed Studio | WiFi + BLE 5.0 — Serial COM3 / 115200 baud | 2 | $320 | $640 |
+| 6 | Microcontrolador ATmega328p | DIP-28 — auxiliar | 1 | $80 | $80 |
+
+## Sensores
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 7 | Sensor de cortina IR | 12 Beams BEM1240-C-440NB — S1 entrada de banda | 1 | $650 | $650 |
+| 8 | Sensor inductivo NPN NO | LJ12A3-4-Z/BX M12 6–36V — S2 posición UR3 | 1 | $120 | $120 |
+| 9 | Sensor inductivo NPN NO | LJ12A3-4-Z/BX M12 6–36V — S3 posición salida | 1 | $120 | $120 |
+
+## Actuadores
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 10 | Motor paso a paso Nema 17 | 17HS4401, 4 kg/cm, 1.7A bipolar | 1 | $350 | $350 |
+| 11 | Driver TB6600 | 9–42V 4A — incluido con motor Nema 17 | 1 | Incluido | — |
+| 12 | Pistón eléctrico | Actuador lineal eléctrico mini — control ESP32 | 1 | Por cotizar | — |
+| 13 | Servomotores MG995 | TowerPro 15 kg 180° — mecanismos auxiliares | 5 | $180 | $900 |
+| 14 | Torreta luminosa LED | Industrial 3 colores — control ESP32 | 1 | $480 | $480 |
+| 15 | Plancha de vapor | T-fal vertical 700–750 g — efector UR3 | 1 | $1,100 | $1,100 |
+| 16 | Electroválvula 5/2 | FESTO monoestable spring return | 1 | $800 | $800 |
+
+## Estructura mecánica
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 17 | Perfil aluminio V-Slot 40×40 mm | Estructura principal | Por cotizar | — | — |
+| 18 | Perfil aluminio V-Slot 20×20 mm | Estructura secundaria | Por cotizar | — | — |
+| 19 | Ruedas V Delrin dual V-Slot | Para perfil V-Slot — 80 unidades total | 2 paq. | Por cotizar | — |
+| 20 | Filamento PLA 1 kg | Creality — efector UR3 + piezas (3 blanco + 3 negro) | 6 rollos | $350 | $2,100 |
+| 21 | Tuerca T Serie 20 M5 | Perfil chico | 80 u. | $2 | $160 |
+| 22 | Tornillo T M5 × 8 mm | Perfil chico | 80 u. | $2 | $160 |
+| 23 | Rondana M5 plana | — | 80 u. | $1 | $80 |
+| 24 | Tuerca T Serie 15 — 5/16"-18 | Perfil grande | 50 u. | $3 | $150 |
+| 25 | Tornillo T 5/16"-18 × 3/4" | Perfil grande | 50 u. | $3 | $150 |
+| 26 | Tornillo Allen M4 × 30 mm | Ajuste de ruedas G12.9 | 100 u. | $3 | $300 |
+| 27 | Tuercas M4 hexagonal | Carbono — 200 unidades total | 2 paq. | $120 | $240 |
+| 28 | Espaciadores M4 nylon | 4 mm ID × 12 mm OD | 2 paq. | $130 | $260 |
+| 29 | Rodamientos 604ZZ | 4×12×4 mm carbono | 2 paq. | $200 | $400 |
+
+## Neumática
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 30 | Pistón neumático 25×100 | Doble acción con conector | 4 | $350 | $1,400 |
+| 31 | Tanque compresor | Ridgid 6 galones 150 PSI | 1 | $3,500 | $3,500 |
+| 32 | Manguera poliuretano 4 mm | — | 5 m | $40/m | $200 |
+| 33 | Manguera poliuretano 6 mm | — | 5 m | $50/m | $250 |
+| 34 | Válvula cierre Festo | Festo 153468 | 1 | $420 | $420 |
+| 35 | Válvula reguladora filtro FRL | 1/4" combinada | 1 | $650 | $650 |
+
+## Eléctrico y tablero
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 36 | Canaleta ranurada 40×25 mm | Legrand 036205 con tapa, 2 m | 2 | $299 | $598 |
+| 37 | Power Supply 24V | Phoenix Contact DIN — protección PLC | 1 | $1,200 | $1,200 |
+| 38 | Fuente DC 0–30V laboratorio | 0–10A variable | 2 | $950 | $1,900 |
+| 39 | Relevadores PLC Finder | 55.34 24V 4 polos | 4 | $280 | $1,120 |
+| 40 | Placa panel | Lámina galvanizada 4×10 c-24 | 1 | $600 | $600 |
+| 41 | Botonera industrial | 22 mm — paro / arranque / emergencia | 1 | $450 | $450 |
+| 42 | Interruptor termomagnético | ABB 1 polo breaker | 1 | $350 | $350 |
+| 43 | Switch TP-Link Gigabit | TL-SG108, 8 puertos | 4 | $600 | $2,400 |
+| 44 | Clemas Dinkle DK4N | Terminales separables | 3 | $180 | $540 |
+| 45 | Cable calibre 16 | 3 m negro + 3 m blanco + 3 m rojo | 9 m | $25/m | $225 |
+| 46 | Alambre calibre 22 AWG | 3 m negro + 3 m azul + 3 m rojo | 9 m | $15/m | $135 |
+
+## Visión artificial y cámaras
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 47 | Cámara web Logitech C270 | HD 720p con micrófono | 3 | $650 | $1,950 |
+| 48 | Tiras LED NeoPixel WS2812 | Stick 8×5050 RGB | 6 | $180 | $1,080 |
+
+## Red y conectividad
+
+| # | Material | Especificación | Cantidad | Precio unitario (MXN) | Total (MXN) |
+| :---: | :--- | :--- | :---: | ---: | ---: |
+| 49 | Cable Ethernet Cat6 | Blindado, 5 m | 5 | $120 | $600 |
 
 ---
 
 ## Resumen de costos
 
-| Categoría | Costo estimado (MXN) |
+| Categoría | Total (MXN) |
 | :--- | ---: |
-| Electrónica y sensores (filas 1, 8–10, 15–16, 19, 24, 33–34, 46–48, 50) | ~$8,055 |
-| Computación y HMI (filas 12–14) | ~$10,432 |
-| Estructura mecánica (filas 20–23, 27–31, 44–45, 47) | ~$4,100 |
-| Neumática y fluidos (filas 3–4, 36–40) | ~$6,420 |
-| Eléctrico y cableado (filas 1, 5, 7, 11, 25–26, 32, 41–43) | ~$7,673 |
-| Manufactura / impresión 3D (fila 35) | ~$2,100 |
-| **TOTAL ESTIMADO DEL EQUIPO** | **~$38,780 MXN (~$1,940 USD)** |
+| Control industrial y robótica (HMI) | $3,000 |
+| Cómputo y microcontroladores | $6,202 |
+| Sensores | $890 |
+| Actuadores | $3,630 |
+| Estructura mecánica | $3,800 |
+| Neumática | $6,420 |
+| Eléctrico y tablero | $9,518 |
+| Visión artificial y cámaras | $3,030 |
+| Red y conectividad | $600 |
+| **TOTAL ESTIMADO DEL EQUIPO** | **$37,090 MXN** |
 
 {: .highlight }
-**Equipos del laboratorio IBERO no incluidos:** UR3 Universal Robots (~$600,000 MXN), PLC Allen Bradley Micro850 (~$24,000 MXN). Estos son propiedad de la universidad y no representan costo directo para el proyecto.
+Los equipos marcados como **Laboratorio IBERO** (UR3, PLC Micro850) son propiedad de la universidad y no representan costo directo para el equipo. Los materiales indicados como **Por cotizar** están pendientes de definir proveedor o cantidad exacta.
 
 {: .note }
-Los precios son estimados a mayo 2026 con base en Amazon México, MercadoLibre y distribuidores nacionales. Pueden variar según disponibilidad, volumen de compra y tipo de cambio. Los campos marcados con **—** no tienen precio definido o el material fue facilitado por el laboratorio.
+Precios confirmados con base en los archivos de código del proyecto: `rutina_maestra.py`, `PROG1.txt`, `MbSrvConf.xml`, `camisa.script` y `playera.script`. Mayo 2026.
 
 ---
 
 ## Siguiente sección
 
 [Metodología de Desarrollo](13-metodologia.md)
+
