@@ -124,9 +124,6 @@ Los materiales listados fueron confirmados directamente desde los archivos de c�
 {: .highlight }
 Los equipos marcados como **Laboratorio IBERO** (UR3, PLC Micro850) son propiedad de la universidad y no representan costo directo para el equipo. Los materiales indicados como **Por cotizar** están pendientes de definir proveedor o cantidad exacta.
 
-{: .note }
-Precios confirmados con base en los archivos de código del proyecto: `rutina_maestra.py`, `PROG1.txt`, `MbSrvConf.xml`, `camisa.script` y `playera.script`. Mayo 2026.
-
 ---
 
 ## Siguiente sección
