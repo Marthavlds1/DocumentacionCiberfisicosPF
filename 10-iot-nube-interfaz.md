@@ -119,7 +119,7 @@ La interfaz incluye un **panel de administrador** protegido por autenticación q
 
 ## Dashboard industrial local
 
-El archivo `dashboard_server.py` sirve un **panel de monitoreo** accesible en la red local del laboratorio (puerto `5050`), que muestra en tiempo real:
+El archivo [`dashboard_server.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/dashboard_server.py), sirve un **panel de monitoreo** accesible en la red local del laboratorio (puerto `5050`), que muestra en tiempo real:
 
 - Etapa actual del proceso (`ESPERA_SENSOR1`, `UR3`, `PISTON`, etc.)
 - Estado de los tres sensores (S1, S2, S3)
@@ -129,6 +129,24 @@ El archivo `dashboard_server.py` sirve un **panel de monitoreo** accesible en la
 - Información del pedido activo (ID, usuario, cantidad, tipo de prenda)
 
 ---
+
+---
+
+## Recursos asociados (Sección 10)
+
+### 📁 Planchaduria-main  
+Código fuente de la **interfaz web del cliente** (SPA en GitHub Pages + Firebase).  
+🔗 [https://github.com/Marthavlds1/Planchaduria-main](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/Planchaduria-main%20(8).zip)
+
+---
+
+### 📁 Docker_Planchaduria  
+Backend desarrollado en Flask y desplegado en Render como contenedor Docker (API REST del sistema).  
+🔗 [https://github.com/Marthavlds1/Docker_Planchaduria](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/Docker_Planchaduria-main%20(4).zip)
+
+---
+
+Ambos repositorios forman parte de la **Sección 10 — IoT / Nube / Interfaz Web**, ya que implementan la comunicación entre el cliente, la nube y el sistema físico.
 
 ## Siguiente sección
 

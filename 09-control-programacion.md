@@ -21,7 +21,7 @@ El sistema distribuye el control en cuatro capas de software que operan coordina
 
 ## rutina_maestra.py — Orquestador central
 
-El archivo `rutina_maestra.py` es el **cerebro del sistema**. Implementa una máquina de estados explícita que coordina todos los subsistemas.
+El archivo [`rutina_maestra.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/rutina_maestra.py) es el **cerebro del sistema**. Implementa una máquina de estados explícita que coordina todos los subsistemas.
 
 ### Librerías principales
 
@@ -146,9 +146,9 @@ La lógica del PLC fue desarrollada en **Connected Components Workbench (CCW)** 
 
 ## Dashboard de monitoreo — dashboard_server.py
 
-El archivo `dashboard_server.py` implementa un **servidor Flask con Server-Sent Events (SSE)** que permite monitorear la rutina maestra en tiempo real sin modificarla:
+El archivo [`dashboard_server.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/rutina_maestra.py) implementa un **servidor Flask con Server-Sent Events (SSE)** que permite monitorear la rutina maestra en tiempo real sin modificarla:
 
-- Ejecuta `rutina_maestra.py` como subproceso.
+- Ejecuta  [`rutina_maestra.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/dashboard_server.py) como subproceso.
 - Lee su salida estándar e interpreta los `[ESTADO]`, `[PLC]`, `[IA]`, `[MASCARAS]` y `[PC]` tags.
 - Emite el estado actualizado a todos los clientes web conectados vía SSE.
 - Expone endpoints REST (`/api/status`, `/api/start`, `/events`).
