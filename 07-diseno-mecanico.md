@@ -77,8 +77,7 @@ El pistón eléctrico está controlado por el **ESP32** mediante comandos serial
 ---
 ## Piezas diseñadas e impresas en 3D
 
-Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en filamento PLA. Los archivos `.stl` están disponibles en la carpeta `0_IMPRIMIR/` del repositorio.
-[text](assets/0_IMPRIMIR)
+Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en filamento PLA. Los archivos `.stl` están disponibles en la carpeta `0_IMPRIMIR/` del repositorio. [Descargar archivos STL](assets/0_IMPRIMIR/0_EntregaPlancha.zip)
 
 | Pieza | Archivo STL | Función |
 | :--- | :--- | :--- |
