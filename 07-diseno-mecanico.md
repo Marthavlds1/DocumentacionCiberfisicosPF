@@ -75,6 +75,31 @@ El pistón eléctrico está controlado por el **ESP32** mediante comandos serial
 | Función | Expulsar prenda al gancho de salida |
 
 ---
+## Piezas diseñadas e impresas en 3D
+
+Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en filamento PLA. Los archivos `.stl` están disponibles en la carpeta `0_IMPRIMIR/` del repositorio.
+[text](assets/0_IMPRIMIR)
+
+| Pieza | Archivo STL | Función |
+| :--- | :--- | :--- |
+| Agarre de Plancha 1 | `AgarredePlancha1.stl` | Sujeción principal de la plancha al efector del UR3 |
+| Agarre de Plancha 2 | `AgarredePlancha2.stl` | Pieza complementaria del agarre de plancha |
+| Agarre Motor a Pasos | `Agarre_MotroaPasos.stl` | Montaje del motor Nema 17 en la estructura |
+| Gancho | `Gancho.stl` | Gancho de salida para entrega de prenda |
+| Cadena Ganchito | `Cadena_Ganchito.stl` | Eslabón de cadena para sistema de transporte |
+| Carrito Base | `Carrito_Base.stl` | Base del carrito sobre la banda |
+| Carrito Agarre | `Cariro_Agarre.stl` | Agarre superior del carrito |
+| Engranaje Plato | `Engranaje_Plato.stl` | Engranaje de transmisión principal |
+| Engranaje Final | `EngranajeFinal.stl` | Engranaje de salida del sistema |
+| Soporte Tensor | `SoporteTensor.stl` | Soporte para sistema de tensado de banda |
+| Tuerca Tensor | `tuercaTensor.stl` | Elemento de ajuste del tensor |
+| Tensores | `Tensores.stl` | Componentes de tensado de la banda |
+| Sensores | `Sensores.stl` | Soporte/montaje para sensores inductivos |
+| Soporte lateral acetato (sup.) | `Soporte lateral de acetato. arribaipt.stl` | Soporte superior lateral de acetato |
+| Soporte lateral acetato | `Soporte lateral de acetato.stl` | Soporte lateral de acetato |
+
+![Piezas impresas en 3D](assets/img/cad-piezas.png)
+---
 
 ## Siguiente sección
 
