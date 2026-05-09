@@ -20,7 +20,7 @@ body {
 .site-title, .site-nav a { color: #ffffff !important; }
 
 .site-title {
-  font-size: 5.0rem !important;
+  font-size: 1.5rem !important;
   font-weight: 700 !important;
   letter-spacing: -0.01em !important;
   opacity: 1;
@@ -62,9 +62,9 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 
 .side-bar .site-title {
   color: #ffffff !important;
-  font-size: 0.9rem !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.02em !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
 }
 
 /* === NAV ITEMS === */
@@ -86,7 +86,7 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 .nav-list .nav-list-link.active {
   color: #0C447C !important;
   font-weight: 600 !important;
-  background-color: #247DB5 !important;
+  background-color: #B5D4F4 !important;
 }
 
 .nav-list .nav-list-link:hover {
@@ -309,9 +309,9 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
   background: #EFF6FF !important;
 }
 .side-bar .nav-list .nav-list-link.active {
-  color: #0C447C !important;
-  font-weight: 500 !important;
-  background: #DBEAFE !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background: #247DB5 !important;
 }
 
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link:hover,
