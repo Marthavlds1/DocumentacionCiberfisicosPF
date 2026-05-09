@@ -21,7 +21,7 @@ El sistema distribuye el control en cuatro capas de software que operan coordina
 
 ## rutina_maestra.py — Orquestador central
 
-El archivo [`rutina_maestra.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/rutina_maestra.py) es el **cerebro del sistema**. Implementa una máquina de estados explícita que coordina todos los subsistemas.
+El archivo [text](assets/files/rutina_maestra.py) es el **cerebro del sistema**. Implementa una máquina de estados explícita que coordina todos los subsistemas.
 
 ### Librerías principales
 

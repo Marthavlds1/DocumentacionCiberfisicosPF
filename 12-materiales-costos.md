@@ -8,8 +8,6 @@ nav_order: 13
 
 Los materiales listados fueron confirmados directamente desde los archivos de código del proyecto (`rutina_maestra.py`, `PROG1.txt`, `MbSrvConf.xml`, `camisa.script`, `playera.script`). Los precios fueron investigados en Amazon México, MercadoLibre y distribuidores nacionales en mayo 2026.
 
-[Descargar lista completa en Excel](assets/docs/materiales_planchado_express.xlsx){: .btn .btn-outline }
-
 ---
 
 ## Control industrial y robótica

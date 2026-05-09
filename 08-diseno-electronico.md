@@ -85,6 +85,7 @@ SALIDA_AUX_PLANCHA  = 6   # 000007 — Activar/desactivar plancha
 | Tiempo de activación del pistón | 9 segundos extendido |
 | Timeout serial | 1 segundo |
 
+El firmware del ESP32 (control de pistón y torreta LED): [text](assets/files/motor_sensor.zip)
 ---
 
 ## Raspberry Pi 3 — Nodo de cámara e IA
