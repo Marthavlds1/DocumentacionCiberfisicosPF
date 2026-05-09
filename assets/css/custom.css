@@ -20,8 +20,8 @@ body {
 .site-title, .site-nav a { color: #ffffff !important; }
 
 .site-title {
-  font-size: 1.25rem !important;
-  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
   letter-spacing: -0.01em !important;
   opacity: 1;
 }
@@ -85,8 +85,8 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 
 .nav-list .nav-list-link.active {
   color: #0C447C !important;
-  font-weight: 500 !important;
-  background-color: #DBEAFE !important;
+  font-weight: 600 !important;
+  background-color: #B5D4F4 !important;
 }
 
 .nav-list .nav-list-link:hover {
@@ -189,7 +189,9 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
   letter-spacing: -0.01em !important;
   margin-top: 2rem !important;
   padding-bottom: 0.4rem !important;
+  border: none !important;
   border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 .page-content h3 {
@@ -376,7 +378,19 @@ footer.site-footer { display: none !important; }
 }
 
 /* Quitar línea bajo títulos del tema base */
-h2, h3, h4 { border-bottom: none !important; }
+h1, h2, h3, h4,
+h1.no-toc, h2.no-toc, h3.no-toc,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  border-bottom: none !important;
+  border: none !important;
+}
 
 /* ===== Logo ===== */
 .site-logo,
