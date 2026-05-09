@@ -1,73 +1,128 @@
-/* === HEADER (barra superior) === */
-.site-header { background-color: #E00034 !important; }
+/* =============================================
+   PLANCHADO EXPRESS — custom.css
+   Paleta: Azul marino moderno
+   ============================================= */
+
+/* === TIPOGRAFÍA GLOBAL === */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === HEADER === */
+.site-header {
+  background-color: #0C447C !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  min-height: 52px !important;
+}
+
 .site-title, .site-nav a { color: #ffffff !important; }
 
-/* === ENLACES EN CONTENIDO (sin morado/azul y con subrayado del color) === */
-:root { --link-color: #E00034; }
+.site-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  opacity: 1;
+}
+
+/* === ENLACES EN CONTENIDO === */
+:root { --link-color: #185FA5; }
 a, a:visited { color: var(--link-color); }
-a { text-decoration-color: rgba(224, 0, 52, 0.4); }
-a:hover { color: #b00028; text-decoration-color: rgba(176, 0, 40, 0.6); }
-a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
+a { text-decoration: none; border-bottom: 1px solid rgba(24, 95, 165, 0.25); }
+a:hover {
+  color: #0C447C;
+  border-bottom-color: rgba(12, 68, 124, 0.6);
+}
+a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 
-/* === SIDEBAR ROJO COMPLETO === */
-.side-bar,
+/* Sin subrayado en nav y header */
+.side-bar a,
+.site-header a,
+.breadcrumbs a,
+.aux-nav a { border-bottom: none !important; text-decoration: none !important; }
+
+/* Ocultar logo Ibero */
+.site-logo,
+.site-title img { display: none !important; }
+
+/* === SIDEBAR === */
+.side-bar {
+  background-color: #DCE9F7 !important;
+  border-right: 1px solid #B5D4F4 !important;
+}
 .side-bar .site-nav,
-.side-bar .nav-list { background-color: #E00034 !important; }
+.side-bar .nav-list { background-color: #DCE9F7 !important; }
 
-/* Título del sitio en el sidebar */
+/* Título del sitio en sidebar */
+.side-bar .site-header {
+  background-color: #0C447C !important;
+  padding: 0 1rem !important;
+}
+
 .side-bar .site-title {
   color: #ffffff !important;
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
 }
 
-/* Links del sidebar (texto blanco; sin degradados) */
+/* === NAV ITEMS === */
 .nav-list .nav-list-link,
-.nav-list .nav-list-link:visited { color: #ffffff !important; }
+.nav-list .nav-list-link:visited {
+  color: #374151 !important;
+  font-size: 0.825rem !important;
+  font-weight: 400 !important;
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+  border-radius: 6px !important;
+  transition: background 0.15s, color 0.15s;
+}
+
 .nav-list .nav-list-link,
 .nav-list .nav-list-link.active,
-.nav-list .nav-list-link:hover {
-  background: none !important;            /* quita el gradiente lila */
-}
+.nav-list .nav-list-link:hover { background: none !important; }
+
 .nav-list .nav-list-link.active {
-  color: #FFD5DE !important;
-  font-weight: 500;
-  background-color: rgba(255,255,255,0.12) !important;
-}
-.nav-list .nav-list-link:hover {
-  color: #FFD5DE !important;
-  background-color: rgba(255,255,255,0.08) !important;
+  color: #0C447C !important;
+  font-weight: 600 !important;
+  background-color: #B5D4F4 !important;
 }
 
-/* (antiguo) Jerarquía simple - será mejorado al final */
+.nav-list .nav-list-link:hover {
+  color: #185FA5 !important;
+  background-color: #EFF6FF !important;
+}
+
 .nav-list .nav-list-item .nav-list .nav-list-link { padding-left: 1.25rem; }
 
-/* Flechas (chevrons) del menú */
+/* Flechas (chevrons) */
 .nav-list-expander,
 .nav-list-expander svg {
-  color: #ffffff !important;
-  stroke: #ffffff !important;
+  color: #9CA3AF !important;
+  stroke: #9CA3AF !important;
   fill: none !important;
 }
 .nav-list-expander:hover,
 .nav-list-expander:hover svg {
-  color: #FFD5DE !important;
-  stroke: #FFD5DE !important;
+  color: #185FA5 !important;
+  stroke: #185FA5 !important;
 }
 
-/* === FOOTER DEL SIDEBAR (texto y enlace legibles) === */
-.side-bar .site-footer { color: #ffffff !important; }
+/* === FOOTER DEL SIDEBAR === */
+.side-bar .site-footer {
+  color: #9CA3AF !important;
+  font-size: 0.75rem !important;
+  border-top: 1px solid #E2EAF3 !important;
+}
 .side-bar .site-footer a,
 .side-bar .site-footer a:visited {
-  color: #FFD5DE !important;
-  text-decoration-color: rgba(255,213,222,0.6);
+  color: #185FA5 !important;
+  border-bottom: none !important;
 }
-.side-bar .site-footer a:hover {
-  color: #ffffff !important;
-  text-decoration-color: #ffffff;
-}
+.side-bar .site-footer a:hover { color: #0C447C !important; }
 
-/* === MENÚ HAMBURGUESA (móvil) EN BLANCO === */
+/* === MENÚ HAMBURGUESA (móvil) === */
 #menu-toggle + label,
 .menu-label,
 .menu-button,
@@ -80,35 +135,16 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   stroke:#ffffff !important;
 }
 #menu-toggle:focus + label,
-.menu-button:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
+.menu-button:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 
-/* === MIGAS (breadcrumbs) a la paleta === */
-.breadcrumbs li a, .breadcrumbs li a:visited { color: #E00034; }
-.breadcrumbs li a:hover { color: #b00028; }
-
-/* === CONTENIDO === */
-.page-content { background-color: #ffffff; color: #333333; }
-
-/* ===== 1) Header: iconos/botón del menú en blanco (forzado) ===== */
+/* === ICONOS DEL HEADER === */
 .site-header svg,
 .site-header .menu-icon,
 .site-header .menu-button,
-.site-header .menu-icon svg {
-  color: #ffffff !important;
-  fill:  #ffffff !important;
-  stroke:#ffffff !important;
-}
-
-/* Estado abierto del menú (checkbox marcado) */
+.site-header .menu-icon svg,
 #menu-toggle:checked + label,
 #menu-toggle:checked + label .menu-icon,
-#menu-toggle:checked + label .menu-icon svg {
-  color: #ffffff !important;
-  fill:  #ffffff !important;
-  stroke:#ffffff !important;
-}
-
-/* Fallback por si el tema usa otros selectores para el toggle */
+#menu-toggle:checked + label .menu-icon svg,
 .site-header .nav-toggle,
 .site-header .nav-toggle .icon,
 .site-header .nav-trigger,
@@ -118,216 +154,267 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   stroke:#ffffff !important;
 }
 
-/* ===== FOOTER: estilos separados por breakpoint ===== */
+/* === MIGAS (breadcrumbs) === */
+.breadcrumb-nav { font-size: 0.8rem !important; }
+.breadcrumbs li a, .breadcrumbs li a:visited { color: #6B7280; }
+.breadcrumbs li a:hover { color: #185FA5; }
 
-/* Desktop (sidebar visible, fondo rojo) */
+/* === ÁREA DE CONTENIDO === */
+.main-content-wrap {
+  max-width: 820px !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.page-content {
+  background-color: #ffffff;
+  color: #1F2937;
+  font-size: 0.9375rem !important;
+  line-height: 1.75 !important;
+}
+
+/* Títulos más ligeros */
+.page-content h1 {
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.page-content h2 {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #1F2937 !important;
+  letter-spacing: -0.01em !important;
+  margin-top: 2rem !important;
+  padding-bottom: 0.4rem !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.page-content h3 {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+}
+
+/* Tablas más limpias */
+.page-content table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  font-size: 0.875rem !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.page-content table th {
+  background: #F3F7FB !important;
+  color: #374151 !important;
+  font-weight: 500 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 0.6rem 1rem !important;
+  border-bottom: 1px solid #E2EAF3 !important;
+}
+
+.page-content table td {
+  padding: 0.6rem 1rem !important;
+  border-bottom: 1px solid #F3F4F6 !important;
+  color: #374151 !important;
+}
+
+.page-content table tr:last-child td { border-bottom: none !important; }
+.page-content table tr:hover td { background: #F9FAFB !important; }
+
+/* Listas más limpias */
+.page-content ul li,
+.page-content ol li {
+  margin-bottom: 0.25rem !important;
+  color: #374151 !important;
+}
+
+/* === SEARCH === */
+.search-input {
+  border-radius: 8px !important;
+  border: 1px solid #E2EAF3 !important;
+  font-size: 0.875rem !important;
+  background: #F8FAFD !important;
+}
+
+/* === AUX NAV (link GitHub arriba derecha) === */
+.aux-nav-list-item a {
+  color: #185FA5 !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+}
+
+/* ===== FOOTER: desktop ===== */
 @media (min-width: 66rem) {
   .side-bar .site-footer {
-    color: #ffffff !important;
     opacity: 1 !important;
-  }
-  .side-bar .site-footer a,
-  .side-bar .site-footer a:visited {
-    color: #FFD5DE !important;
-    text-decoration-color: rgba(255, 213, 222, 0.6) !important;
-  }
-  .side-bar .site-footer a:hover {
-    color: #ffffff !important;
-    text-decoration-color: #ffffff !important;
   }
 }
 
-/* Móvil / pantalla chica (footer global sobre fondo claro) */
+/* Móvil */
 @media (max-width: 66rem) {
   footer.site-footer {
-    background: #ffffff !important;   /* fondo claro */
+    background: #ffffff !important;
     opacity: 1 !important;
   }
-
-  /* Texto base del footer en gris legible */
   footer.site-footer,
   footer.site-footer p,
   footer.site-footer span,
   footer.site-footer *:not(a) {
-    color: #495057 !important;
+    color: #9CA3AF !important;
     text-shadow: none !important;
   }
-
-  /* Enlaces del footer en rojo Ibero */
   footer.site-footer a,
   footer.site-footer a:visited {
-    color: #E00034 !important;
-    text-decoration-color: rgba(224, 0, 52, 0.5) !important;
+    color: #185FA5 !important;
+    border-bottom: none !important;
   }
-  footer.site-footer a:hover {
-    color: #b00028 !important;
-    text-decoration-color: rgba(176, 0, 40, 0.7) !important;
-  }
+  footer.site-footer a:hover { color: #0C447C !important; }
 }
 
-/* ====== Jerarquía del menú lateral (mejor diferenciación) ====== */
+/* ====== Jerarquía del menú lateral ====== */
 
-/* Nivel 1 (padres) */
 .side-bar .nav-list > .nav-list-item > .nav-list-link {
-  font-weight: 400;
-  letter-spacing: .2px;
-  font-size: 1.05rem;
-  padding-left: 1rem;
+  font-weight: 400 !important;
+  font-size: 0.825rem !important;
+  padding-left: 1rem !important;
   background: none !important;
+  color: #374151 !important;
 }
 
-/* Nivel 2 (hijos) */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link {
-  font-weight: 300;
-  font-size: 0.95rem;
-  padding-left: 1.75rem;
+  font-size: 0.8rem !important;
+  padding-left: 1.6rem !important;
   position: relative;
-  background: rgba(255,255,255,0.05); /* leve contraste */
-  border-left: 3px solid transparent;
+  color: #6B7280 !important;
+  border-left: 2px solid transparent;
 }
 
-/* Nivel 3 (nietos) */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-item .nav-list .nav-list-link {
-  padding-left: 2.25rem;
-  font-size: 0.9rem;
-  background: rgba(255,255,255,0.03);
+  padding-left: 2.1rem !important;
+  font-size: 0.775rem !important;
+  color: #9CA3AF !important;
 }
 
-/* Punto visual (bullet) para hijos */
-.side-bar .nav-list .nav-list-item .nav-list .nav-list-link::before {
-  content: "•";
-  position: absolute;
-  left: 1.3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: .6;
-  font-size: .8rem;
-}
-
-/* Hover y Activo más notorios */
 .side-bar .nav-list .nav-list-link:hover {
-  color: #FFD5DE !important;
-  background: rgba(255,255,255,0.10) !important;
+  color: #185FA5 !important;
+  background: #EFF6FF !important;
 }
 .side-bar .nav-list .nav-list-link.active {
   color: #ffffff !important;
-  font-weight: 500;
-  background: rgba(255,255,255,0.20) !important;
+  font-weight: 600 !important;
+  background: #247DB5 !important;
 }
 
-/* Barra izquierda solo para hijos (nivel 2+) en hover/activo */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link:hover,
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link.active {
-  border-left-color: #FFD5DE;
+  border-left-color: #185FA5;
 }
 
-/* Mejor foco accesible */
 .side-bar .nav-list .nav-list-link:focus {
-  outline: 2px solid #FFD5DE !important;
+  outline: 2px solid #B5D4F4 !important;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Separación sutil entre secciones de nivel 1 */
-.side-bar .nav-list > .nav-list-item + .nav-list-item {
-  margin-top: .15rem;
-}
+.side-bar .nav-list > .nav-list-item + .nav-list-item { margin-top: .05rem; }
 
-/* Oculta el footer del tema en todas las vistas */
-footer.site-footer { display: none !important; } 
+/* Oculta footer del tema */
+footer.site-footer { display: none !important; }
 
-/* ===== Footer propio (siempre visible) ===== */
-.custom-footer{
+/* ===== Footer propio ===== */
+.custom-footer {
   margin-top: 3rem;
   padding-top: 1rem;
-  /* border-top: 1px solid #e5e7eb;     /* separador sutil */
-  color: #6B7280;                     /* gris medio */
-  font-size: 0.95rem;
+  color: #9CA3AF;
+  font-size: 0.85rem;
   background: transparent;
+  border-top: 1px solid #F3F4F6;
 }
 
 .custom-footer a,
-.custom-footer a:visited{
-  color: #E00034;                     /* rojo IBERO */
-  text-decoration-color: rgba(224,0,52,.45);
+.custom-footer a:visited {
+  color: #185FA5;
+  border-bottom: none !important;
 }
 
-.custom-footer a:hover{
-  color: #b00028;
-  text-decoration-color: rgba(176,0,40,.65);
+.custom-footer a:hover { color: #0C447C; }
+
+.custom-footer__modified strong { color: #6B7280; }
+
+@media (max-width: 66rem) {
+  .custom-footer { background: #ffffff; }
 }
 
-.custom-footer__modified strong{
-  color: #4B5563;                     /* gris un poco más oscuro para el label */
-}
-
-/* Asegura legibilidad en móvil (fondo claro) */
-@media (max-width: 66rem){
-  .custom-footer{
-    background: #ffffff;
-    color: #6B7280;
-  }
-}
-
-/* ===== NAVBAR FIX (Just the Docs) =====
-   - Neutraliza pseudo-elementos globales en el sidebar para evitar "∞"
-   - Redibuja un bullet limpio solo en el 2º nivel
-*/
+/* ===== NAVBAR FIX ===== */
 .side-bar a::before,
 .side-bar a::after,
 .site-nav .nav-list-link::before,
-.site-nav .nav-list-link::after {
-  content: none !important;
-}
+.site-nav .nav-list-link::after { content: none !important; }
 
-/* Espacio para el bullet en hijos (nivel 2) */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link {
   position: relative;
-  padding-left: 1.6rem;
+  padding-left: 1.6rem !important;
 }
 
-/* Bullet para nivel 2 (Unicode) */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link::before {
-  content: "\2022" !important;      /* bullet • */
+  content: "\2022" !important;
   position: absolute;
   left: 0.9rem;
   top: 50%;
   transform: translateY(-50%);
-  opacity: .6;
-  font-size: .8rem;
+  opacity: .4;
+  font-size: .7rem;
   color: currentColor;
   font-variant-ligatures: none;
 }
-/* ===== END NAVBAR FIX ===== */
 
-/* Tamaño y espaciado del logo en el título del sitio */
+/* Quitar línea bajo títulos del tema base */
+h1, h2, h3, h4,
+h1.no-toc, h2.no-toc, h3.no-toc,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  border-bottom: none !important;
+  border: none !important;
+}
+
+/* ===== Logo ===== */
 .site-logo,
 .site-title img {
-  height: 28px;         /* ajusta a tu preferencia: 24–36px suele verse bien */
+  height: 24px;
   width: auto;
   vertical-align: middle;
   margin-right: .5rem;
 }
 
-/* Evita que el logo se “encime” en pantallas pequeñas */
 @media (max-width: 600px) {
   .site-logo,
-  .site-title img {
-    height: 24px;
-  }
+  .site-title img { height: 20px; }
 }
 
-video {
-  max-width: 100%;
-  height: auto;
-}
+/* ===== Video y embeds ===== */
+video { max-width: 100%; height: auto; border-radius: 8px; }
 
 .responsive-embed {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%;
   overflow: hidden;
-  border-radius: 12px; /* opcional */
+  border-radius: 10px;
 }
 
 .responsive-embed iframe {
