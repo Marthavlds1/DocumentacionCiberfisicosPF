@@ -86,7 +86,7 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 .nav-list .nav-list-link.active {
   color: #0C447C !important;
   font-weight: 600 !important;
-  background-color: #B5D4F4 !important;
+  background-color: #378ADD !important;
 }
 
 .nav-list .nav-list-link:hover {
