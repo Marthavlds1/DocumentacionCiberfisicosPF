@@ -62,7 +62,7 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 
 .side-bar .site-title {
   color: #ffffff !important;
-  font-size: 1.5rem !important;
+  font-size: 1.0rem !important;
   font-weight: 700 !important;
   letter-spacing: -0.01em !important;
 }
