@@ -20,10 +20,10 @@ body {
 .site-title, .site-nav a { color: #ffffff !important; }
 
 .site-title {
-  font-size: 1rem !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.01em !important;
-  opacity: 0.95;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  opacity: 1;
 }
 
 /* === ENLACES EN CONTENIDO === */
@@ -42,13 +42,17 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
 .breadcrumbs a,
 .aux-nav a { border-bottom: none !important; text-decoration: none !important; }
 
+/* Ocultar logo Ibero */
+.site-logo,
+.site-title img { display: none !important; }
+
 /* === SIDEBAR === */
 .side-bar {
-  background-color: #F8FAFD !important;
-  border-right: 1px solid #E2EAF3 !important;
+  background-color: #DCE9F7 !important;
+  border-right: 1px solid #B5D4F4 !important;
 }
 .side-bar .site-nav,
-.side-bar .nav-list { background-color: #F8FAFD !important; }
+.side-bar .nav-list { background-color: #DCE9F7 !important; }
 
 /* Título del sitio en sidebar */
 .side-bar .site-header {
@@ -185,7 +189,7 @@ a:focus { outline: 2px solid #B5D4F4; outline-offset: 2px; }
   letter-spacing: -0.01em !important;
   margin-top: 2rem !important;
   padding-bottom: 0.4rem !important;
-  border-bottom: 1px solid #E5E7EB !important;
+  border-bottom: none !important;
 }
 
 .page-content h3 {
@@ -370,6 +374,9 @@ footer.site-footer { display: none !important; }
   color: currentColor;
   font-variant-ligatures: none;
 }
+
+/* Quitar línea bajo títulos del tema base */
+h2, h3, h4 { border-bottom: none !important; }
 
 /* ===== Logo ===== */
 .site-logo,
