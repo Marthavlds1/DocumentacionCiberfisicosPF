@@ -18,7 +18,7 @@ El sistema **Planchado Express** es un sistema ciberfísico (CPS) compuesto por 
 | Capa | Componentes | Protocolo |
 | :--- | :--- | :--- |
 | **Nube / Internet** | Firebase, Render (Flask), GitHub Pages | HTTPS / REST / Firebase SDK |
-| **Coordinación local** | Raspberry Pi 3 (`rutina_maestra.py`) | Python / HTTP / Modbus / Serial |
+| **Coordinación local** | Raspberry Pi 3 ([`rutina_maestra.py`](assets/files/rutina_maestra.py)) | Python / HTTP / Modbus / Serial |
 | **HMI** | Raspberry Pi 3 + pantalla táctil + cámara QR | HTTPS → Firebase |
 | **Control industrial** | PLC Allen Bradley Micro850 | Modbus TCP |
 | **Robótica y periféricos** | UR3, ESP32, sensores, motor, pistón | Modbus TCP, Serial USB |
@@ -114,7 +114,7 @@ RENDER_BASE_URL = "https://docker-planchaduria.onrender.com"
 ## Rol de cada componente en el CPS
 
 ### Raspberry Pi 3 — Orquestador central
-Es el **cerebro del sistema**. Ejecuta `rutina_maestra.py`, que coordina todos los demás componentes. Hace polling a Firebase para detectar pedidos, controla el PLC por Modbus, envía scripts al UR3, comanda el ESP32 por serial, solicita fotos a la Raspberry cámara y ejecuta el modelo de IA localmente.
+Es el **cerebro del sistema**. Ejecuta [`rutina_maestra.py`](assets/files/rutina_maestra.py), que coordina todos los demás componentes. Hace polling a Firebase para detectar pedidos, controla el PLC por Modbus, envía scripts al UR3, comanda el ESP32 por serial, solicita fotos a la Raspberry cámara y ejecuta el modelo de IA localmente.
 
 ### PLC Allen Bradley Micro850 — Control de campo
 Gestiona los **actuadores físicos y los sensores** del proceso: enciende/apaga el motor de la banda, lee el estado de los tres sensores (S1, S2, S3) y activa la plancha eléctrica (salida `000007`). Es la interfaz entre el mundo digital y el mundo físico de la línea de producción.
