@@ -39,7 +39,7 @@ El proyecto siguió una **metodología iterativa por capas**, desarrollando e in
 ### Etapa 5 — Modelo IA y sistema de cámara (Mar–Abr 2026)
 - Recopilación del dataset de prendas (camisas y playeras)
 - Entrenamiento del clasificador con Google Teachable Machine
-- Exportación a `keras_model.h5` e integración con la Raspberry Pi de cámara
+- Exportación a [`keras_model.h5`](assets/files/keras_model.h5) e integración con la Raspberry Pi de cámara
 - Validación de la clasificación con imágenes de prueba
 
 ### Etapa 6 — Integración completa y rutina maestra (Abril 2026)

@@ -35,7 +35,7 @@ TIEMPO_DEBOUNCE   = 0.05  # segundos
 
 ## 3. Clasificación IA con iluminación variable
 
-**Problema:** El modelo `keras_model.h5` presentó variabilidad en el nivel de confianza de clasificación cuando la iluminación del laboratorio cambiaba (luz natural vs. artificial).
+**Problema:** El modelo [`keras_model.h5`](assets/files/keras_model.h5) presentó variabilidad en el nivel de confianza de clasificación cuando la iluminación del laboratorio cambiaba (luz natural vs. artificial).
 
 **Solución:** Se implementaron **reintentos automáticos** (hasta 3 intentos con 2 segundos de espera) para la captura de fotografía, y se mejoró la iluminación fija de la estación de foto con luz artificial constante.
 
@@ -66,7 +66,7 @@ TIEMPO_ENTRE_REINTENTOS = 2.0  # segundos
 
 **Problema:** La rutina maestra debía manejar simultáneamente el estado del PLC, el robot, la cámara y Firebase, además de responder a errores en cualquiera de estas capas sin bloquear el proceso principal.
 
-**Solución:** Arquitectura de **etapas explícitas** con la función `cambiar_etapa()`, que garantiza que cada subsistema solo está activo durante su etapa correspondiente. El uso de threading controlado (`dashboard_server.py`) permite monitorear el proceso sin interferir con él.
+**Solución:** Arquitectura de **etapas explícitas** con la función `cambiar_etapa()`, que garantiza que cada subsistema solo está activo durante su etapa correspondiente. El uso de threading controlado  [`dashboard_server.py`](assets/files/dashboard_server.py) permite monitorear el proceso sin interferir con él.
 
 ---
 
