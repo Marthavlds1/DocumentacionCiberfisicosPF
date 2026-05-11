@@ -106,13 +106,12 @@ Una segunda Raspberry Pi 3 opera como **nodo independiente de cámara e intelige
 
 ## Recursos asociados (Secciones 08 y 09)
 
-### 📁 motor_sensor.zip  
+### motor_sensor.zip  
 Código del sistema embebido basado en ESP32 para el control de actuadores (pistón y torreta).  
-🔗 (https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/motor_sensor%20-%20copia.zip)
-
-→ **Sección 08 — Diseño Electrónico** y **Sección 09 — Control y Programación**  
+Descarga:[motor_sensor.zip](assets/files/motor_sensor.zip)
 
 Este recurso contiene la implementación del control del ESP32, incluyendo la gestión de actuadores y la interacción con sensores. Se relaciona con ambas secciones ya que define tanto la arquitectura electrónica del sistema como la lógica de programación de los periféricos.
+
 ## Siguiente sección
 
 [Control y Programación](09-control-programacion.md)

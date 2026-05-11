@@ -97,7 +97,6 @@ Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en
 | Soporte lateral acetato (sup.) | `Soporte lateral de acetato. arribaipt.stl` | Soporte superior lateral de acetato |
 | Soporte lateral acetato | `Soporte lateral de acetato.stl` | Soporte lateral de acetato |
 
-![Piezas impresas en 3D](assets/img/cad-piezas.png)
 ---
 
 ## Siguiente sección
