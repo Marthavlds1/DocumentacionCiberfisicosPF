@@ -12,9 +12,9 @@ El sistema distribuye el control en cuatro capas de software que operan coordina
 
 | Capa | Archivo | Tecnología | Función |
 | :--- | :--- | :--- | :--- |
-| Orquestador | `rutina_maestra.py` | Python / Raspberry Pi | Coordina todo el proceso |
+| Orquestador | [rutina_maestra.py](assets/files/rutina_maestra.py) | Python / Raspberry Pi | Coordina todo el proceso |
 | Control de campo | Proyecto CCW | PLC Micro850 / Ladder | Motor, sensores, plancha |
-| Robótica | `camisa.script` / `playera.script` | URScript | Trayectorias UR3 |
+| Robótica | [`camisa.script`](assets/files/camisa.script) / [`playera.script`](assets/files/playera.script) | URScript | Trayectorias UR3 |
 | Periféricos | Firmware ESP32 | C++ / Arduino | Pistón + Torreta |
 
 ---
@@ -146,13 +146,19 @@ La lógica del PLC fue desarrollada en **Connected Components Workbench (CCW)** 
 
 ## Dashboard de monitoreo — dashboard_server.py
 
-El archivo [`dashboard_server.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/rutina_maestra.py) implementa un **servidor Flask con Server-Sent Events (SSE)** que permite monitorear la rutina maestra en tiempo real sin modificarla:
+El archivo [`dashboard_server.py`](assets/files/dashboard_server.py) implementa un **servidor Flask con Server-Sent Events (SSE)** que permite monitorear la rutina maestra en tiempo real sin modificarla:
 
-- Ejecuta  [`rutina_maestra.py`](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/53bd11cb4e1ae3bd55e17dc11fb92a7b8c506ee0/dashboard_server.py) como subproceso.
+- Ejecuta [`rutina_maestra.py`](assets/files/rutina_maestra.py) como subproceso.
 - Lee su salida estándar e interpreta los `[ESTADO]`, `[PLC]`, `[IA]`, `[MASCARAS]` y `[PC]` tags.
 - Emite el estado actualizado a todos los clientes web conectados vía SSE.
 - Expone endpoints REST (`/api/status`, `/api/start`, `/events`).
 
+## Recursos asociados 
+
+### motor_sensor.zip  
+Código del sistema embebido basado en ESP32 para el control de actuadores (pistón y torreta).  
+Descarga: [motor_sensor.zip](assets/files/motor_sensor.zip)
+Este recurso contiene la implementación del control del ESP32, incluyendo la gestión de actuadores y la interacción con sensores. Se relaciona con ambas secciones ya que define tanto la arquitectura electrónica del sistema como la lógica de programación de los periféricos.
 ---
 
 ## Siguiente sección
