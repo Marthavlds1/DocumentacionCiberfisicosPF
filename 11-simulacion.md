@@ -19,7 +19,7 @@ Las trayectorias de planchado fueron programadas y validadas en el **entorno de 
 - Definir waypoints de forma interactiva moviendo el robot manualmente.
 - Verificar alcance articular y detectar singularidades.
 - Simular la trayectoria completa en modo "fantasma" antes de ejecutarla físicamente.
-- Exportar el programa como script URScript ( [`camisa.script](assets/files/camisa.script)/ [`playera.script`](assets/files/playera.script)).
+- Exportar el programa como script URScript ( [`camisa.script`](assets/files/camisa.script)/ [`playera.script`](assets/files/playera.script)).
 
 Las rutinas fueron validadas con la plancha montada en el efector para verificar que no había colisiones con la estructura de la banda.
 
