@@ -43,9 +43,8 @@ El proyecto siguió una **metodología iterativa por capas**, desarrollando e in
 - Validación de la clasificación con imágenes de prueba
 
 ### Etapa 6 — Integración completa y rutina maestra (Abril 2026)
-- Desarrollo de `rutina_maestra.py` como orquestador central
-- Integración de todos los subsistemas en el ciclo completo
-- Implementación del dashboard de monitoreo (`dashboard_server.py`)
+- Desarrollo de [`rutina_maestra.py`](assets/files/rutina_maestra.py) como orquestador central
+- Integración de todos los subsistemas en el ciclo completo [`dashboard_server.py`](assets/files/dashboard_server.py)
 - Pruebas de ciclo completo con prendas reales
 
 ### Etapa 7 — Pruebas, ajustes y documentación (Abr–May 2026)
@@ -64,7 +63,7 @@ El proyecto siguió una **metodología iterativa por capas**, desarrollando e in
 | Inteligencia Artificial | Entrenamiento de modelo, integración con Raspberry Pi |
 | Backend / Nube | Flask API, Firebase, Docker, Render |
 | Interfaz web | GitHub Pages, autenticación, QR, panel admin |
-| Integración | `rutina_maestra.py`, arquitectura ciberfísica completa |
+| Integración |[`rutina_maestra.py`](assets/files/rutina_maestra.py), arquitectura ciberfísica completa |
 
 ---
 
