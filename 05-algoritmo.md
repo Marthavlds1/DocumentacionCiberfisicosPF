@@ -8,7 +8,7 @@ nav_order: 6
 
 ## Lógica de control por etapas
 
-El sistema utiliza una **máquina de estados explícita** implementada en `rutina_maestra.py`. Cada etapa se nombra con una clave única y el estado se actualiza mediante la función `cambiar_etapa()`, que imprime el estado para que el dashboard pueda interpretarlo en tiempo real.
+El sistema utiliza una **máquina de estados explícita** implementada en [`rutina_maestra.py`](assets/files/rutina_maestra.py). Cada etapa se nombra con una clave única y el estado se actualiza mediante la función `cambiar_etapa()`, que imprime el estado para que el dashboard pueda interpretarlo en tiempo real.
 
 ```python
 def cambiar_etapa(nueva_etapa: str):
