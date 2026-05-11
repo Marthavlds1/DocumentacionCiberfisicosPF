@@ -9,37 +9,27 @@ nav_order: 17
 ## Fotografías del sistema
 
 {: .note }
-Agrega aquí las fotografías del sistema físico. Coloca tus imágenes en la carpeta `assets/img/evidencia/` y reemplaza los nombres de archivo en los ejemplos de abajo.
+Fotografías del sistema físico. Coloca tus imágenes en la carpeta `assets/img/evidencia/` y reemplaza los nombres de archivo en los ejemplos de abajo.
 
 ### Sistema completo — Vista general
 
-```markdown
-![Vista general del sistema](../assets/img/evidencia/sistema-general.jpg)
-```
+![alt text](assets/img/sistemacompleto.jpeg)
 
 ### Robot UR3 con efector y plancha
 
-```markdown
-![UR3 con efector PLA y plancha](../assets/img/evidencia/ur3-efector.jpg)
-```
+![alt text](assets/img/ur3.jpeg)
 
 ### Tablero PLC Micro850
 
-```markdown
-![Tablero PLC Allen Bradley Micro850](../assets/img/evidencia/plc-tablero.jpg)
-```
+![alt text](assets/img/plc.jpeg)
 
 ### HMI con lector QR
 
-```markdown
-![HMI - Pantalla táctil con lector QR](../assets/img/evidencia/hmi.jpg)
-```
+![alt text](assets/img/hmi.jpeg)
 
 ### Banda transportadora y sensores
 
-```markdown
-![Banda transportadora con sensores S1, S2, S3](../assets/img/evidencia/banda-sensores.jpg)
-```
+![alt text](assets/img/banda.jpeg)
 
 ---
 
@@ -62,14 +52,6 @@ La interfaz web está disponible en vivo en:
 ### Panel de administrador
 ```markdown
 ![Panel de administrador](../assets/img/evidencia/web-admin.jpg)
-```
-
----
-
-## Dashboard industrial — Monitoreo en tiempo real
-
-```markdown
-![Dashboard de monitoreo industrial](../assets/img/evidencia/dashboard-local.jpg)
 ```
 
 ---
