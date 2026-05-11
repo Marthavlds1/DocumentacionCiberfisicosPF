@@ -40,20 +40,18 @@ La interfaz web está disponible en vivo en:
 [luiscortesmunoz.github.io/Planchaduria](https://luiscortesmunoz.github.io/Planchaduria/){: .btn .btn-red }
 
 ### Pantalla principal — Inicio de sesión
-```markdown
-![Pantalla de inicio de sesión](../assets/img/evidencia/web-login.jpg)
-```
+![alt text](assets/img/inicioo.png)
 
 ### Registro de prenda y generación de QR
-```markdown
-![Registro de prenda y QR generado](../assets/img/evidencia/web-registro-qr.jpg)
-```
+![](assets/img/inicio.png)
+![alt text](assets/img/qr.png)
 
-### Panel de administrador
-```markdown
-![Panel de administrador](../assets/img/evidencia/web-admin.jpg)
-```
 
+### Video Funcionamiento
+<video controls width="720">
+  <source src="{{ '/assets/img/pagina.mp4' | relative_url }}" type="video/mp4">
+  Tu navegador no soporta el formato de video.
+</video>
 ---
 
 ## Prendas procesadas — Evidencia fotográfica IA
