@@ -6,7 +6,7 @@ nav_order: 13
 
 # Materiales y Costos
 
-Los materiales listados fueron confirmados directamente desde los archivos de código del proyecto (`rutina_maestra.py`, `PROG1.txt`, `MbSrvConf.xml`, `camisa.script`, `playera.script`). Los precios fueron investigados en Amazon México, MercadoLibre y distribuidores nacionales en mayo 2026.
+Los materiales listados fueron utilizados en el proyecto.Los precios fueron investigados en Amazon México, MercadoLibre y distribuidores nacionales en 2026.
 
 ---
 
@@ -107,7 +107,7 @@ Los materiales listados fueron confirmados directamente desde los archivos de c�
 | **TOTAL ESTIMADO DEL EQUIPO** | **$24,519 MXN** |
 
 {: .highlight }
-Los equipos marcados como **Laboratorio IBERO** (UR3, PLC Micro850) son propiedad de la universidad y no representan costo directo para el equipo. Los materiales indicados como **Por cotizar** están pendientes de definir proveedor o cantidad exacta.
+Los equipos marcados como **Laboratorio IBERO** (UR3, PLC Micro850) son propiedad de la universidad y no representan costo directo para el equipo. Los materiales indicados como **Por cotizar** están pendientes de definir cantidad exacta.
 
 ---
 
