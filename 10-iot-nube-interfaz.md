@@ -56,7 +56,7 @@ Firebase es el **eje central de datos** del sistema. Gestiona cuatro servicios:
 El backend está construido con **Flask** y desplegado en **Render** como contenedor Docker. Actúa como intermediario entre la interfaz web, Firebase y la Raspberry Pi.
 
 ### Dependencias (`requirements.txt`)
-
+[`requirements.txt`](assets/files/requirements.txt)
 ```
 Flask==3.0.3
 flask-cors==4.0.1
@@ -134,15 +134,15 @@ El archivo [`dashboard_server.py`](https://github.com/Marthavlds1/DocumentacionC
 
 ## Recursos asociados (Sección 10)
 
-### 📁 Planchaduria-main  
+### Planchaduria-main  
 Código fuente de la **interfaz web del cliente** (SPA en GitHub Pages + Firebase).  
-🔗 [https://github.com/Marthavlds1/Planchaduria-main](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/Planchaduria-main%20(8).zip)
+Descarga: [Planchaduria-main](assets/files/Planchaduria-main.zip)
 
 ---
 
-### 📁 Docker_Planchaduria  
+### Docker_Planchaduria  
 Backend desarrollado en Flask y desplegado en Render como contenedor Docker (API REST del sistema).  
-🔗 [https://github.com/Marthavlds1/Docker_Planchaduria](https://github.com/Marthavlds1/DocumentacionCiberfisicosPF/blob/ac6fe1eed4138e5c5a7f5ef40f5a574c15d0ac2b/Docker_Planchaduria-main%20(4).zip)
+Descarga: [Docker_Planchaduria](assets/files/Docker_Planchaduria-main.zip)
 
 ---
 
