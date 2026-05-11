@@ -30,12 +30,12 @@ El cliente coloca la prenda en la entrada de la banda transportadora. El **senso
 | Etapa interna | `ESPERA_SENSOR1` |
 
 ### Etapa 4 — Avance y captura fotográfica con IA
-La banda avanza durante **45 segundos** hasta la estación de fotografía. Una **Raspberry Pi 3 con cámara** captura una imagen de la prenda y ejecuta el modelo `keras_model.h5` (clasificador binario: Camisa / Playera, entrenado con Google Teachable Machine). El resultado y la fotografía se suben al backend en Render y quedan registrados en Firebase Storage como evidencia de recepción.
+La banda avanza durante **45 segundos** hasta la estación de fotografía. Una **Raspberry Pi 3 con cámara** captura una imagen de la prenda y ejecuta el modelo[keras_model.h5](assets/files/keras_model.h5) (clasificador binario: Camisa / Playera, entrenado con Google Teachable Machine). El resultado y la fotografía se suben al backend en Render y quedan registrados en Firebase Storage como evidencia de recepción.
 
 | Parámetro | Valor |
 | :--- | :--- |
 | Tiempo de avance previo | 45 segundos |
-| Modelo IA | `keras_model.h5` — Keras / TensorFlow |
+| Modelo IA | `[keras_model.h5](assets/files/keras_model.h5) ` — Keras / TensorFlow |
 | Clases detectadas | `Camisa` / `Playera` |
 | Etapa interna | `FOTO` |
 
