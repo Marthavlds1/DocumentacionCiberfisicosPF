@@ -42,8 +42,8 @@ La banda avanza durante **45 segundos** hasta la estación de fotografía. Una *
 ### Etapa 5 — Planchado automatizado con UR3 (Sensor S2)
 La banda avanza hasta que el **sensor inductivo S2** (dirección `000005`) detecta la prenda en posición de planchado. El PLC envía la señal al UR3 vía **Modbus TCP**. El robot ejecuta la rutina correspondiente al tipo de prenda:
 
-- `camisa.script` — 7 waypoints para camisa de vestir
-- `playera.script` — 7 waypoints para playera / camiseta
+- [`camisa.script`](assets/files/camisa.script) — 7 waypoints para camisa de vestir
+- [`playera.script`](assets/files/playera.script) — 7 waypoints para playera / camiseta
 
 La plancha está montada en el efector final del UR3 mediante un agarrador impreso en **PLA**.
 
