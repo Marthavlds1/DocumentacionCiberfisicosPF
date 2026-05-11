@@ -76,7 +76,7 @@ La interfaz web está disponible en vivo en:
 
 ## Prendas procesadas — Evidencia fotográfica IA
 
-Las siguientes fotografías fueron capturadas automáticamente durante las pruebas del 27–28 de abril de 2026 y almacenadas en Firebase Storage:
+Las siguientes fotografías fueron capturadas automáticamente durante las pruebas del 27–28 de abril de 2026 y almacenadas en [Firebase Storage](assets/files/fotos_pc):
 
 | Archivo | Usuario | Fecha | Clasificación IA |
 | :--- | :--- | :--- | :--- |
@@ -91,29 +91,14 @@ Las siguientes fotografías fueron capturadas automáticamente durante las prueb
 | `usuario_238_foto_1_20260427_212537.jpg` | 238 | 28 Abr · 21:25 | — |
 | `usuario_239_foto_1_20260427_213958.jpg` | 239 | 28 Abr · 21:39 | — |
 
-{: .note }
-Para mostrar estas fotos en la página, cópialas de la carpeta `fotos_pc/` del repositorio `industrial_dashboard_planchado_express` a `assets/img/evidencia/` y agrega las etiquetas `![descripción](../assets/img/evidencia/nombre.jpg)` en esta sección.
-
 ---
 
 ## Video de demostración
 
-Si tienes un video del sistema funcionando, puedes incrustarlo así:
-
-```html
-<div class="responsive-embed">
-  <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID"
-          allowfullscreen></iframe>
-</div>
-```
-
-O si el video está en el repositorio (como `assets/videos/demo.mp4`):
-
-```html
-<video controls>
-  <source src="../assets/videos/demo.mp4" type="video/mp4">
+<video controls width="720">
+  <source src="{{ '/assets/img/videofinal.mp4' | relative_url }}" type="video/mp4">
+  Tu navegador no soporta el formato de video.
 </video>
-```
 
 ---
 
