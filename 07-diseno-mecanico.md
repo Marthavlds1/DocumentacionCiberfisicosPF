@@ -77,7 +77,7 @@ Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en
 | Agarre de Plancha 2 | `AgarredePlancha2.stl` | Pieza complementaria del agarre de plancha |
 | Agarre Motor a Pasos | `Agarre_MotroaPasos.stl` | Montaje del motor Nema 17 en la estructura |
 | Gancho | `Gancho.stl` | Gancho de salida para entrega de prenda |
-| Cadena Ganchito | []`Cadena_Ganchito.stl`](assets/img/cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
+| Cadena Ganchito | [`Cadena_Ganchito.stl`](assets/img/cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
 | Carrito Base | `Carrito_Base.stl` | Base del carrito sobre la banda |
 | Carrito Agarre | `Cariro_Agarre.stl` | Agarre superior del carrito |
 | Engranaje Plato | `Engranaje_Plato.stl` | Engranaje de transmisión principal |
