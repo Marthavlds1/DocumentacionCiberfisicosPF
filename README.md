@@ -74,7 +74,7 @@ DocumentacionCiberfisicosPF/
 | Renata Badillo Cabrera | Ingeniería Mecatrónica — IBERO |
 | Camila Sánchez Guevara | Ingeniería Mecatrónica — IBERO |
 
-**Cuerpo docente:** Mr. Joel Arango Ramírez · Dr. Huber Girón Nieto
+**Cuerpo docente:** Mtro. Joel Arango Ramírez · Dr. Huber Girón Nieto
 
 ---
 
