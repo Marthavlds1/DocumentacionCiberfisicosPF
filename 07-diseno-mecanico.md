@@ -80,13 +80,13 @@ Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en
 | Agarre de Plancha 2 | ![Agarre Plancha 2](assets/img/AgarrePlancha2.jpeg) | Pieza complementaria del agarre de plancha |
 | Agarre Motor a Pasos | ![Agarre Motor](assets/img/AgarreMotor.jpeg) | Montaje del motor Nema 17 en la estructura |
 | Gancho | ![Gancho](assets/img/Gancho.jpeg) | Gancho de salida para entrega de prenda |
-| Cadena Ganchito | ![Cadena Ganchito](assets/img/cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
-| Carrito Base | ![Carrito Base](assets/img/CarritoBase.jpeg) | Base del carrito sobre la banda |
+| Cadena Ganchito | ![Cadena Ganchito](assets/img/Cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
+| Carrito Base | ![Carrito Base](assets/img/BaseCarrito.jpeg) | Base del carrito sobre la banda |
 | Carrito Agarre | ![Carrito Agarre](assets/img/CarritoAgarre.jpeg) | Agarre superior del carrito |
 | Engranaje Plato | ![Engranaje Plato](assets/img/Engranaje_plato.jpeg) | Engranaje de transmisión principal |
 | Engranaje Final | ![Engranaje Final](assets/img/EngranajeFinal.jpeg) | Engranaje de salida del sistema |
 | Soporte Tensor | ![Soporte Tensor](assets/img/SoporteTensor.jpeg) | Soporte para sistema de tensado de banda |
-| Tuerca Tensor | ![Tuerca Tensor](assets/img/tuercaTensor.jpeg) | Elemento de ajuste del tensor |
+| Tuerca Tensor | ![Tuerca Tensor](assets/img/tuercsTensor.jpeg) | Elemento de ajuste del tensor |
 | Tensores | ![Tensores](assets/img/Tensores.jpeg) | Componentes de tensado de la banda |
 | Sensores | ![Sensores](assets/img/Sensor.jpeg) | Soporte/montaje para sensores inductivos |
 | Soporte acetato sup. | ![Soporte acetato superior](assets/img/arriba.jpeg) | Soporte superior lateral de acetato |
