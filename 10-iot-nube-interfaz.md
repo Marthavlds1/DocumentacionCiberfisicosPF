@@ -10,16 +10,7 @@ nav_order: 11
 
 La capa IoT del sistema integra tres servicios en la nube que operan de forma coordinada:
 
-```
-  Cliente (navegador)
-       │
-       ▼
-  GitHub Pages ──────► Firebase (Auth + Firestore + Storage)
-                              │
-                         Render (Flask)
-                              │
-                         Raspberry Pi (rutina_maestra.py)
-```
+![alt text](assets/img/iot.jpeg)
 
 ---
 
