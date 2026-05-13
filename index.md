@@ -76,7 +76,8 @@ El sistema integra:
 - [14. Resultados](14-resultados.md)
 - [15. Problemas Encontrados](15-problemas.md)
 - [16. Evidencia Visual](16-evidencia.md)
-- [17. Referencias](17-referencias.md)
+- [17. Evidencia Visual](18-Mejoras-Futuras.md)
+- [18. Referencias](17-referencias.md)
 
 ---
 
