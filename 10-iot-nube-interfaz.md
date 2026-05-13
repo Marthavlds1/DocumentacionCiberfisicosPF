@@ -50,16 +50,19 @@ Firebase es el **eje central de datos** del sistema. Gestiona cuatro servicios:
                             ```
 ---
 
+### Registro de usuarios en Cloud Firestore
+
 ![Vista de Firestore](assets/img/BD_USUARIOS.png)
 
 **Figura 1.** Vista de la colección `usuarios` en Cloud Firestore, donde se almacenan los datos principales de cada usuario registrado.
 
+---
+
+### Almacenamiento de fotografías en Firebase Storage
+
 ![fotos de Firestore](assets/img/fotosDB.png)
 
 **Figura 2.** Almacenamiento de fotografías de evidencia en Firebase Storage.
-
-
-
 
 ## Backend Flask — Render (Docker)
 
