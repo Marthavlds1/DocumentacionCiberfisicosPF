@@ -6,6 +6,74 @@ nav_order: 9
 
 # Diseño Electrónico
 
+## Diagrama de cableado — Sistema de control mecatrónico
+
+**PLC Allen Bradley Micro850 QWB · Driver TB6600 · Motor NEMA 17 · Sensores · Plancha 120 VAC**
+
+![Diagrama de cableado — Sistema de control mecatrónico](assets/img/diagrama-cableado.png)
+
+### Entradas del PLC (Inputs)
+
+| Input | Componente | Tipo | Conexión |
+| :---: | :--- | :--- | :--- |
+| I0 | Sensor 1 — Cortina | Digital NPN | Señal (azul OUT) → I0 · Marrón (+) → +24 V · Negro → 0 V |
+| I4 | Sensor 2 — Capacitivo | Digital NPN | Señal (azul OUT) → I4 · Marrón (+) → +24 V · Negro → 0 V |
+| I5 | Sensor 3 — Capacitivo | Digital NPN | Señal (azul OUT) → I5 · Marrón (+) → +24 V · Negro → 0 V |
+| COM | Tierra común entradas | — | Todas las COM de entradas → 0 V / GND |
+
+### Salidas del PLC (Outputs)
+
+| Output | Función | Destino | Observación |
+| :---: | :--- | :--- | :--- |
+| O0 | EN+ (Driver) | TB6600 — terminal EN+ | Habilita el driver del motor |
+| O1 | PUL+ (Driver) | TB6600 — terminal PUL+ | Pulsos de paso del motor |
+| O2 | DIR+ (Driver) | TB6600 — terminal DIR+ | Dirección de giro |
+| O3 | Relevador (Plancha) | Bobina A1 del relevador 24 VDC | Activa la plancha 120 VAC al cerrar COM–NC |
+| COM | Alimentación salidas | +24 VDC | Todas las COM de salidas → +24 V |
+
+### Conexión Motor NEMA 17 → Driver TB6600
+
+| Cable motor | Terminal driver | Color |
+| :--- | :--- | :--- |
+| B− | B− del TB6600 | Verde |
+| B+ | B+ del TB6600 | Negro |
+| A− | A− del TB6600 | Rojo |
+| A+ | A+ del TB6600 | Azul |
+
+### Conexión Driver TB6600 — Potencia y tierra
+
+| Terminal driver | Conexión | Observación |
+| :--- | :--- | :--- |
+| VCC | +24 VDC | Alimentación del driver |
+| GND | 0 V / GND | Retorno de potencia |
+| EN− | Tierra común | Conectar a GND común del panel |
+| DIR− | Tierra común | Conectar a GND común del panel |
+| PUL− | Tierra común | Conectar a GND común del panel |
+
+{: .note }
+EN−, DIR− y PUL− deben conectarse a la misma barra de tierra común del panel de clemas.
+
+### Relevador — Activación de la plancha 120 VAC
+
+| Terminal | Conexión |
+| :--- | :--- |
+| A1 (bobina +) | Salida O3 del PLC |
+| A2 (bobina −) | 0 V / GND |
+| COM (contacto) | Fase 120 VAC (L) |
+| NC (contacto) | Terminal de la plancha |
+
+{: .warning }
+La plancha opera a **120 VAC**. El relevador aísla el circuito de control (24 VDC) del circuito de potencia (120 VAC). El contacto NC se cierra cuando el relevador se energiza, activando la plancha.
+
+### Notas generales del cableado
+
+1. Todas las COM de entradas del PLC van a **0 V / GND**.
+2. Todas las COM de salidas del PLC van a **+24 VDC**.
+3. EN−, DIR− y PUL− del driver TB6600 conectados a **tierra común**.
+4. El relevador energiza la plancha a vapor (120 VAC) al cerrar el contacto COM–NC.
+
+---
+
 ## Arquitectura electrónica general
 
 El sistema electrónico se organiza en tres capas:
@@ -85,7 +153,6 @@ SALIDA_AUX_PLANCHA  = 6   # 000007 — Activar/desactivar plancha
 | Tiempo de activación del pistón | 9 segundos extendido |
 | Timeout serial | 1 segundo |
 
-El firmware del ESP32 (control de pistón y torreta LED): [text](assets/files/motor_sensor.zip)
 ---
 
 ## Raspberry Pi 3 — Nodo de cámara e IA
@@ -102,15 +169,15 @@ Una segunda Raspberry Pi 3 opera como **nodo independiente de cámara e intelige
 | Clases | `0 Camisa` / `1 Playera` |
 
 ---
+
+## Recursos asociados
+
+### motor_sensor.zip
+Código del sistema embebido basado en ESP32 para el control de actuadores (pistón y torreta).
+
+[Descargar motor_sensor.zip](assets/files/motor_sensor.zip){: .btn .btn-outline }
+
 ---
-
-## Recursos asociados 
-
-### motor_sensor.zip  
-Código del sistema embebido basado en ESP32 para el control de actuadores (pistón y torreta).  
-Descarga: [motor_sensor.zip](assets/files/motor_sensor.zip)
-
-Este recurso contiene la implementación del control del ESP32, incluyendo la gestión de actuadores y la interacción con sensores. Se relaciona con ambas secciones ya que define tanto la arquitectura electrónica del sistema como la lógica de programación de los periféricos.
 
 ## Siguiente sección
 
