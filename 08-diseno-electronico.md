@@ -10,7 +10,7 @@ nav_order: 9
 
 **PLC Allen Bradley Micro850 QWB · Driver TB6600 · Motor NEMA 17 · Sensores · Plancha 120 VAC**
 
-![Diagrama de cableado — Sistema de control mecatrónico](assets/img/diagrama-cableado.png)
+![Diagrama de cableado — Sistema de control mecatrónico](assets/img/diagrama-cableado.jpeg)
 
 ### Entradas del PLC (Inputs)
 
@@ -152,6 +152,14 @@ SALIDA_AUX_PLANCHA  = 6   # 000007 — Activar/desactivar plancha
 | Controla | Pistón eléctrico + Torreta LED |
 | Tiempo de activación del pistón | 9 segundos extendido |
 | Timeout serial | 1 segundo |
+
+### Diseño PCB para ESP32
+
+Se diseñó una tarjeta de circuito impreso (PCB) personalizada para integrar el módulo **XIAO ESP32-S3** con los actuadores del sistema. La PCB incorpora un puente H **L298N** para el manejo de corriente del pistón eléctrico, diodos de protección **1N4007** en configuración flyback para suprimir picos inductivos, conectores de tornillo para la torreta LED y el pistón, un LED indicador de estado y los capacitores de desacople necesarios para la estabilidad del circuito. El diseño centraliza en una sola placa la lógica de control del ESP32 y la etapa de potencia de los actuadores, simplificando el cableado del tablero y reduciendo el riesgo de conexiones sueltas durante la operación del sistema.
+
+![Esquemático PCB — ESP32, L298N, pistón y torreta](assets/img/pcb.jpeg)
+
+[Descargar PCB\_ESP32.zip](assets/files/PCB_ESP32.zip){: .btn .btn-outline }
 
 ---
 
