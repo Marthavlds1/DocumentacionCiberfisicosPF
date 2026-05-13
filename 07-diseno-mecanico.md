@@ -10,15 +10,7 @@ nav_order: 8
 
 La estructura física de **Planchado Express** está compuesta por una **banda transportadora lineal** con tres estaciones de sensado y una plataforma de montaje para el robot UR3. El recorrido de la prenda va desde la entrada (sensor S1) hasta la salida por gancho (sensor S3).
 
-```
-  ENTRADA         FOTO          UR3          SALIDA
-    │               │             │              │
-   [S1]──────────[Cámara]──────[S2]────────────[S3]──► [Gancho]
-  Barrera IR    Rasp. Pi      Inductivo       Inductivo   Pistón
-                 + IA
-                              [UR3 ↓]
-                              Plancha
-```
+![Estructura general del sistema](assets/img/diseno-mecanico.png)
 
 ---
 
