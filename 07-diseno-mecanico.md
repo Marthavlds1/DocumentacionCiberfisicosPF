@@ -11,6 +11,7 @@ nav_order: 8
 La estructura física de **Planchado Express** está compuesta por una **banda transportadora lineal** con tres estaciones de sensado y una plataforma de montaje para el robot UR3. El recorrido de la prenda va desde la entrada (sensor S1) hasta la salida por gancho (sensor S3).
 
 ![Estructura general del sistema](assets/img/diseno-mecanico.png)
+![Medidas de estacion](assets/img/Estacion.jpeg)
 
 ---
 
@@ -28,7 +29,6 @@ La estructura física de **Planchado Express** está compuesta por una **banda t
 | Efector final | Agarrador impreso en PLA (fabricación propia) |
 | Herramienta montada | Plancha eléctrica comercial |
 | Waypoints por rutina | 7 puntos calibrados |
-| Librería efector | OnRobot URCap 5.10.1 |
 
 ---
 
@@ -73,21 +73,21 @@ Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en
 
 | Pieza | Archivo STL | Función |
 | :--- | :--- | :--- |
-| Agarre de Plancha 1 | `AgarredePlancha1.stl` | Sujeción principal de la plancha al efector del UR3 |
-| Agarre de Plancha 2 | `AgarredePlancha2.stl` | Pieza complementaria del agarre de plancha |
-| Agarre Motor a Pasos | `Agarre_MotroaPasos.stl` | Montaje del motor Nema 17 en la estructura |
-| Gancho | `Gancho.stl` | Gancho de salida para entrega de prenda |
+| Agarre de Plancha 1 | ![`AgarredePlancha1.stl`](assets/img/AgarrePlacha1.jpeg) | Sujeción principal de la plancha al efector del UR3 |
+| Agarre de Plancha 2 | ![`AgarredePlancha2.stl`](assets/img/AgarrePlancha2.jpeg )| Pieza complementaria del agarre de plancha |
+| Agarre Motor a Pasos | ![`Agarre_MotroaPasos.stl`] (assets/img/AgarreMotor.jpeg)| Montaje del motor Nema 17 en la estructura |
+| Gancho | ![`Gancho.stl`](assets/img/Gancho.jpeg)| Gancho de salida para entrega de prenda |
 | Cadena Ganchito | ![`Cadena_Ganchito.stl`](assets/img/cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
-| Carrito Base | `Carrito_Base.stl` | Base del carrito sobre la banda |
-| Carrito Agarre | `Cariro_Agarre.stl` | Agarre superior del carrito |
-| Engranaje Plato | `Engranaje_Plato.stl` | Engranaje de transmisión principal |
-| Engranaje Final | `EngranajeFinal.stl` | Engranaje de salida del sistema |
-| Soporte Tensor | `SoporteTensor.stl` | Soporte para sistema de tensado de banda |
-| Tuerca Tensor | `tuercaTensor.stl` | Elemento de ajuste del tensor |
-| Tensores | `Tensores.stl` | Componentes de tensado de la banda |
-| Sensores | `Sensores.stl` | Soporte/montaje para sensores inductivos |
-| Soporte lateral acetato (sup.) | `Soporte lateral de acetato. arribaipt.stl` | Soporte superior lateral de acetato |
-| Soporte lateral acetato | `Soporte lateral de acetato.stl` | Soporte lateral de acetato |
+| Carrito Base | ![`Carrito_Base.stl`] (07-diseno-mecanico.md)| Base del carrito sobre la banda |
+| Carrito Agarre | ![`Carriro_Agarre.stl`] (assets/img/CarritoAgarre.jpeg)| Agarre superior del carrito |
+| Engranaje Plato |![`Engranaje_Plato.stl`] (assets/img/Engranaje_plato.jpeg)| Engranaje de transmisión principal |
+| Engranaje Final |![`EngranajeFinal.stl`] (assets/img/EngranajeFinal.jpeg)| Engranaje de salida del sistema |
+| Soporte Tensor | ![`SoporteTensor.stl`] (assets/img/SoporteTensor.jpeg)| Soporte para sistema de tensado de banda |
+| Tuerca Tensor | ![`tuercaTensor.stl`] (assets/img/tuercsTensor.jpeg)| Elemento de ajuste del tensor |
+| Tensores | ![`Tensores.stl`] (assets/img/Tensores.jpeg)| Componentes de tensado de la banda |
+| Sensores | ![`Sensores.stl`] (assets/img/Sensor.jpeg) | Soporte/montaje para sensores inductivos |
+| Soporte lateral acetato (sup.) |![`Soporte lateral de acetato. arribaipt.stl`] (assets/img/arriba.jpeg)| Soporte superior lateral de acetato |
+| Soporte lateral acetato | ![`Soporte lateral de acetato.stl`] (assets/img/WhatsApp Image 2026-05-13 at 2.46.29 PM.jpeg) | Soporte lateral de acetato |
 
 ---
 
