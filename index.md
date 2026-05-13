@@ -8,6 +8,9 @@ nav_order: 1
 
 Bienvenido a la documentación técnica del proyecto **Planchado Express**, desarrollado como parte de la asignatura de **Sistemas Ciberfísicos** en la Universidad Iberoamericana, Primavera 2026.
 
+![alt text](assets/img/inicioPaginaAUTO3.jpeg)
+
+
 ---
 
 ## Identidad del Proyecto
@@ -23,7 +26,7 @@ Bienvenido a la documentación técnica del proyecto **Planchado Express**, desa
 
 ## Cuerpo Docente
 
-- **Mr. Joel Arango Ramírez.**
+- **Mtro. Joel Arango Ramírez.**
 - **Dr. Huber Girón Nieto.**
 
 ## Integrantes del Equipo
@@ -73,7 +76,8 @@ El sistema integra:
 - [14. Resultados](14-resultados.md)
 - [15. Problemas Encontrados](15-problemas.md)
 - [16. Evidencia Visual](16-evidencia.md)
-- [17. Referencias](17-referencias.md)
+- [17. Mejoras Futuras](18-Mejoras-Futuras.md)
+- [18. Referencias](17-referencias.md)
 
 ---
 
