@@ -67,27 +67,30 @@ El pistón eléctrico está controlado por el **ESP32** mediante comandos serial
 | Función | Expulsar prenda al gancho de salida |
 
 ---
+
 ## Piezas diseñadas e impresas en 3D
 
-Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en filamento PLA. Los archivos `.stl` están disponibles en la carpeta `0_IMPRIMIR/` del repositorio. [Descargar archivos STL](assets/0_IMPRIMIR)
+Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en filamento PLA. Los archivos `.stl` están disponibles en la carpeta `0_IMPRIMIR/` del repositorio.
 
-| Pieza | Archivo STL | Función |
-| :--- | :--- | :--- |
-| Agarre de Plancha 1 | ![`AgarredePlancha1.stl`](assets/img/AgarrePlacha1.jpeg) | Sujeción principal de la plancha al efector del UR3 |
-| Agarre de Plancha 2 | ![`AgarredePlancha2.stl`](assets/img/AgarrePlancha2.jpeg )| Pieza complementaria del agarre de plancha |
-| Agarre Motor a Pasos | ![`Agarre_MotroaPasos.stl`] (assets/img/AgarreMotor.jpeg)| Montaje del motor Nema 17 en la estructura |
-| Gancho | ![`Gancho.stl`](assets/img/Gancho.jpeg)| Gancho de salida para entrega de prenda |
-| Cadena Ganchito | ![`Cadena_Ganchito.stl`](assets/img/cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
-| Carrito Base | ![`Carrito_Base.stl`] (07-diseno-mecanico.md)| Base del carrito sobre la banda |
-| Carrito Agarre | ![`Carriro_Agarre.stl`] (assets/img/CarritoAgarre.jpeg)| Agarre superior del carrito |
-| Engranaje Plato |![`Engranaje_Plato.stl`] (assets/img/Engranaje_plato.jpeg)| Engranaje de transmisión principal |
-| Engranaje Final |![`EngranajeFinal.stl`] (assets/img/EngranajeFinal.jpeg)| Engranaje de salida del sistema |
-| Soporte Tensor | ![`SoporteTensor.stl`] (assets/img/SoporteTensor.jpeg)| Soporte para sistema de tensado de banda |
-| Tuerca Tensor | ![`tuercaTensor.stl`] (assets/img/tuercsTensor.jpeg)| Elemento de ajuste del tensor |
-| Tensores | ![`Tensores.stl`] (assets/img/Tensores.jpeg)| Componentes de tensado de la banda |
-| Sensores | ![`Sensores.stl`] (assets/img/Sensor.jpeg) | Soporte/montaje para sensores inductivos |
-| Soporte lateral acetato (sup.) |![`Soporte lateral de acetato. arribaipt.stl`] (assets/img/arriba.jpeg)| Soporte superior lateral de acetato |
-| Soporte lateral acetato | ![`Soporte lateral de acetato.stl`] (assets/img/WhatsApp Image 2026-05-13 at 2.46.29 PM.jpeg) | Soporte lateral de acetato |
+[Descargar archivos STL](assets/0_IMPRIMIR){: .btn .btn-outline }
+
+| Pieza | Vista previa | Función |
+| :--- | :---: | :--- |
+| Agarre de Plancha 1 | ![Agarre Plancha 1](assets/img/AgarrePlacha1.jpeg) | Sujeción principal de la plancha al efector del UR3 |
+| Agarre de Plancha 2 | ![Agarre Plancha 2](assets/img/AgarrePlancha2.jpeg) | Pieza complementaria del agarre de plancha |
+| Agarre Motor a Pasos | ![Agarre Motor](assets/img/AgarreMotor.jpeg) | Montaje del motor Nema 17 en la estructura |
+| Gancho | ![Gancho](assets/img/Gancho.jpeg) | Gancho de salida para entrega de prenda |
+| Cadena Ganchito | ![Cadena Ganchito](assets/img/cadena_carrito.jpeg) | Eslabón de cadena para sistema de transporte |
+| Carrito Base | ![Carrito Base](assets/img/CarritoBase.jpeg) | Base del carrito sobre la banda |
+| Carrito Agarre | ![Carrito Agarre](assets/img/CarritoAgarre.jpeg) | Agarre superior del carrito |
+| Engranaje Plato | ![Engranaje Plato](assets/img/Engranaje_plato.jpeg) | Engranaje de transmisión principal |
+| Engranaje Final | ![Engranaje Final](assets/img/EngranajeFinal.jpeg) | Engranaje de salida del sistema |
+| Soporte Tensor | ![Soporte Tensor](assets/img/SoporteTensor.jpeg) | Soporte para sistema de tensado de banda |
+| Tuerca Tensor | ![Tuerca Tensor](assets/img/tuercaTensor.jpeg) | Elemento de ajuste del tensor |
+| Tensores | ![Tensores](assets/img/Tensores.jpeg) | Componentes de tensado de la banda |
+| Sensores | ![Sensores](assets/img/Sensor.jpeg) | Soporte/montaje para sensores inductivos |
+| Soporte acetato sup. | ![Soporte acetato superior](assets/img/arriba.jpeg) | Soporte superior lateral de acetato |
+| Soporte acetato | ![Soporte acetato](assets/img/soporte-acetato.jpeg) | Soporte lateral de acetato |
 
 ---
 
