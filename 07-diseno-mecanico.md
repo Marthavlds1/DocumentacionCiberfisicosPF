@@ -91,6 +91,7 @@ Todas las piezas fueron diseñadas en CAD y fabricadas mediante impresión 3D en
 | Sensores | ![Sensores](assets/img/Sensor.jpeg) | Soporte/montaje para sensores inductivos |
 | Soporte acetato sup. | ![Soporte acetato superior](assets/img/arriba.jpeg) | Soporte superior lateral de acetato |
 | Soporte acetato | ![Soporte acetato](assets/img/soporte-acetato.jpeg) | Soporte lateral de acetato |
+| Eslabón Cadena | ![Eslabon Cadena](assets/img/cadena.png) | Eslabón de Cadena |
 
 ---
 
