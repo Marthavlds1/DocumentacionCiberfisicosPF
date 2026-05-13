@@ -10,7 +10,7 @@ nav_order: 9
 
 **PLC Allen Bradley Micro850 QWB · Driver TB6600 · Motor NEMA 17 · Sensores · Plancha 120 VAC**
 
-![Diagrama de cableado — Sistema de control mecatrónico](assets/img/diagrama-cableado.jpeg)
+![Diagrama de cableado — Sistema de control mecatrónico](assets/img/diagrama–cableado.jpeg)
 
 ### Entradas del PLC (Inputs)
 
