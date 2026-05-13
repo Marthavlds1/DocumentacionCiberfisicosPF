@@ -159,7 +159,7 @@ Se diseñó una tarjeta de circuito impreso (PCB) personalizada para integrar el
 
 ![Esquemático PCB — ESP32, L298N, pistón y torreta](assets/img/pcb.jpeg)
 
-[Descargar PCB\_ESP32.zip](assets/files/PCB_ESP32.zip){: .btn .btn-outline }
+[Descargar PCB\_ESP32.zip](assets/files/PCB_ESP32.zip)
 
 ---
 
@@ -183,7 +183,7 @@ Una segunda Raspberry Pi 3 opera como **nodo independiente de cámara e intelige
 ### motor_sensor.zip
 Código del sistema embebido basado en ESP32 para el control de actuadores (pistón y torreta).
 
-[Descargar motor_sensor.zip](assets/files/motor_sensor.zip){: .btn .btn-outline }
+[Descargar motor_sensor.zip](assets/files/motor_sensor.zip)
 
 ---
 
