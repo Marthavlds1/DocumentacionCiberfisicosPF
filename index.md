@@ -8,6 +8,9 @@ nav_order: 1
 
 Bienvenido a la documentación técnica del proyecto **Planchado Express**, desarrollado como parte de la asignatura de **Sistemas Ciberfísicos** en la Universidad Iberoamericana, Primavera 2026.
 
+![alt text](assets/img/inicioPaginaAUTO3.jpeg)
+
+
 ---
 
 ## Identidad del Proyecto
