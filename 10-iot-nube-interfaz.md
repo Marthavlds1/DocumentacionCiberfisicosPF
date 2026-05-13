@@ -47,7 +47,8 @@ Firebase es el **eje central de datos** del sistema. Gestiona cuatro servicios:
                           "updated_at": "2026-04-27T17:20:33"
                             }
                             }
-                            ```
+```
+
 ---
 
 ### Registro de usuarios en Cloud Firestore
