@@ -142,6 +142,23 @@ La lógica del PLC fue desarrollada en **Connected Components Workbench (CCW)** 
 - Activación de la salida `000007` para la plancha eléctrica
 - Respuesta a los comandos Modbus TCP desde la Raspberry Pi
 
+La siguiente imagen muestra una parte del programa en lenguaje Ladder utilizado para controlar el movimiento del motor dentro del sistema de planchado automatizado. Esta lógica permite activar el motor, definir su dirección de giro y generar los pulsos necesarios para el movimiento.
+
+En la primera línea se realiza la lectura del sensor de entrada, identificado como `sensor1`. Este sensor permite detectar la presencia de una prenda en el sistema. Cuando el sensor cambia de estado, la señal puede ser utilizada por el PLC para iniciar la secuencia de trabajo.
+
+Posteriormente, se observa una lógica de arranque y paro del motor. El contacto `CMD_START` permite activar la bobina `MOTOR_RUN`, mientras que `CMD_STOP` funciona como condición de paro. Además, se utiliza un contacto auxiliar de `MOTOR_RUN` para mantener enclavado el motor una vez que fue iniciado, evitando que se apague inmediatamente al soltar la señal de arranque.
+
+También se incluye la señal `CMD_DIR_FWD`, la cual controla la dirección de giro del motor mediante la salida digital `_IO_EM_DO_01`. Esta salida se encarga de enviar la señal de dirección al controlador del motor.
+
+Finalmente, se utilizan temporizadores tipo `TON` para generar una señal intermitente llamada `PULSE_BIT`. Esta señal funciona como el pulso que permite mover el motor paso a paso. Al alternar el estado de `PULSE_BIT`, el PLC puede enviar pulsos continuos al driver del motor mientras la señal `MOTOR_RUN` permanezca activa.
+
+### Lógica Ladder para control de motor
+
+![Lógica Ladder para control de motor](assets/img/ladder_motor.png)
+
+**Figura 1.** Programa Ladder implementado en el PLC para controlar el arranque, paro, dirección y generación de pulsos del motor utilizado en el sistema de planchado automatizado.
+
+
 ---
 
 ## Dashboard de monitoreo — dashboard_server.py
@@ -152,6 +169,11 @@ El archivo [`dashboard_server.py`](assets/files/dashboard_server.py) implementa 
 - Lee su salida estándar e interpreta los `[ESTADO]`, `[PLC]`, `[IA]`, `[MASCARAS]` y `[PC]` tags.
 - Emite el estado actualizado a todos los clientes web conectados vía SSE.
 - Expone endpoints REST (`/api/status`, `/api/start`, `/events`).
+
+![Dashboard](assets/img/dashboard.png)
+
+**Figura 2.** Interfaz HMI para monitoreo del proceso de Planchado Express.
+
 
 ## Recursos asociados 
 
