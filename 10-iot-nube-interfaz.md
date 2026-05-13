@@ -39,15 +39,25 @@ Firebase es el **eje central de datos** del sistema. Gestiona cuatro servicios:
 ```json
 {
   "estado_actual": {
-    "usuario_actual": "229",
-    "cantidad": 1,
-    "activo": true,
-    "estado": "En proceso",
-    "current_order_id": "abc123",
-    "updated_at": "2026-04-27T17:20:33"
-  }
-}
-```
+      "usuario_actual": "229",
+          "cantidad": 1,
+              "activo": true,
+                  "estado": "En proceso",
+                      "current_order_id": "abc123",
+                          "updated_at": "2026-04-27T17:20:33"
+                            }
+                            }
+                            ```
+
+
+![Vista de Firestore](assets/img/BD_USUARIOS.png)
+
+**Figura 1.** Vista de la colección `usuarios` en Cloud Firestore, donde se almacenan los datos principales de cada usuario registrado.
+
+![fotos de Firestore](assets/img/fotosDB.png)
+
+**Figura 2.** Almacenamiento de fotografías de evidencia en Firebase Storage.
+
 
 ---
 
